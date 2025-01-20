@@ -8,4 +8,5 @@ public sealed class CategoryTag : CreationTrackingEntity
 	public Category Category { get; set; } = default!;
 
 	public ICollection<Transaction> Transactions { get; set; } = [];
+	public ICollection<TagBudget> TagBudgets { get; set; } = [];
 }

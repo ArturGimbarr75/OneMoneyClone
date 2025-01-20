@@ -13,4 +13,6 @@ public sealed class User : IdentityUser<Guid>
 	public ICollection<Budget> Budgets { get; set; } = [];
 	public ICollection<Category> Categories { get; set; } = [];
 	public ICollection<RefreshToken> RefreshTokens { get; set; } = [];
+	public ICollection<SavingsBudget> SavingBudgets { get; set; } = [];
+	public ICollection<TagBudget> TagBudgets { get; set; } = [];
 }
