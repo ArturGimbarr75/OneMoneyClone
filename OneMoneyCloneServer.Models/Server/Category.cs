@@ -1,4 +1,4 @@
-﻿namespace OneMoneyCloneServer.Models;
+﻿namespace OneMoneyCloneServer.Models.Server;
 
 public sealed class Category : CreationTrackingEntity
 {
