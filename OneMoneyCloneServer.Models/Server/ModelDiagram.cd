@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OneMoneyCloneServer.Models.Category">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <AssociationLine Name="CategoryTags" Type="OneMoneyCloneServer.Models.CategoryTag" ManuallyRouted="true">
+      <Path>
+        <Point X="17.75" Y="1.796" />
+        <Point X="17.75" Y="3.964" />
+        <Point X="18.292" Y="3.964" Type="JumpStart" />
+        <Point X="18.458" Y="3.964" Type="JumpEnd" />
+        <Point X="19.75" Y="3.964" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="User" Type="OneMoneyCloneServer.Models.User" FixedFromPoint="true">
+      <Path>
+        <Point X="17" Y="0.827" />
+        <Point X="12.75" Y="0.827" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACDAAAAAAAAAAAAAAAAAAQAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Category.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CategoryTags" />
+      <Property Name="Transactions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.CategoryTag">
+    <Position X="19.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAgAAAAAAAAQAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>CategoryTag.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Category" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.RefreshToken">
+    <Position X="1.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAABAAA=</HashCode>
+      <FileName>RefreshToken.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.User">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <AssociationLine Name="Accounts" Type="OneMoneyCloneServer.Models.Account" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.75" Y="2.091" />
+        <Point X="14.978" Y="2.091" />
+        <Point X="14.978" Y="6.282" />
+        <Point X="15.5" Y="6.282" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="MainCurrency" Type="OneMoneyCloneServer.Models.Currency" ManuallyRouted="true">
+      <Path>
+        <Point X="11.25" Y="1.116" />
+        <Point X="9.569" Y="1.116" />
+        <Point X="9.569" Y="3.943" />
+        <Point X="6.156" Y="3.943" />
+        <Point X="6.156" Y="5.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="SavingsBudgets" Type="OneMoneyCloneServer.Models.SavingsBudget" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.375" Y="2.367" />
+        <Point X="11.375" Y="5.401" />
+        <Point X="10.583" Y="5.401" Type="JumpStart" />
+        <Point X="10.417" Y="5.401" Type="JumpEnd" />
+        <Point X="8.75" Y="5.401" />
+        <Point X="8.75" Y="9.5" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIACAAAACAAAAAAAAAAEQiAEAEAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MainCurrency" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Accounts" />
+      <Property Name="RefreshTokens" />
+      <Property Name="SavingsBudgets" />
+      <Property Name="Budgets" />
+      <Property Name="Categories" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.Currency">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="Users" Type="OneMoneyCloneServer.Models.User" ManuallyRouted="true">
+      <Path>
+        <Point X="5.75" Y="5.25" />
+        <Point X="5.75" Y="3.547" />
+        <Point X="9.435" Y="3.547" />
+        <Point X="9.435" Y="2.042" />
+        <Point X="9.486" Y="2.042" Type="JumpStart" />
+        <Point X="9.652" Y="2.042" Type="JumpEnd" />
+        <Point X="10.417" Y="2.042" Type="JumpStart" />
+        <Point X="10.583" Y="2.042" Type="JumpEnd" />
+        <Point X="11.25" Y="2.042" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Transactions" Type="OneMoneyCloneServer.Models.Transaction" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.75" Y="6.93" />
+        <Point X="5.75" Y="7.305" />
+        <Point X="5.979" Y="7.305" Type="JumpStart" />
+        <Point X="6.146" Y="7.305" Type="JumpEnd" />
+        <Point X="8.667" Y="7.305" Type="JumpStart" />
+        <Point X="8.833" Y="7.305" Type="JumpEnd" />
+        <Point X="10.417" Y="7.305" Type="JumpStart" />
+        <Point X="10.583" Y="7.305" Type="JumpEnd" />
+        <Point X="11.917" Y="7.305" Type="JumpStart" />
+        <Point X="12.083" Y="7.305" Type="JumpEnd" />
+        <Point X="13.615" Y="7.305" />
+        <Point X="13.615" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACCACAAAAAAAAAAAAAgAAQAAAAAAACAAAAAAAAACAA=</HashCode>
+      <FileName>Currency.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Users" />
+      <Property Name="Accounts" />
+      <Property Name="Transactions" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.Transaction">
+    <Position X="13.25" Y="8.25" Width="1.75" />
+    <AssociationLine Name="Currency" Type="OneMoneyCloneServer.Models.Currency" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.906" Y="8.25" />
+        <Point X="13.906" Y="7.875" />
+        <Point X="13.698" Y="7.875" Type="JumpStart" />
+        <Point X="13.531" Y="7.875" Type="JumpEnd" />
+        <Point X="12.083" Y="7.875" Type="JumpStart" />
+        <Point X="11.917" Y="7.875" Type="JumpEnd" />
+        <Point X="10.583" Y="7.875" Type="JumpStart" />
+        <Point X="10.417" Y="7.875" Type="JumpEnd" />
+        <Point X="8.833" Y="7.875" Type="JumpStart" />
+        <Point X="8.667" Y="7.875" Type="JumpEnd" />
+        <Point X="6.062" Y="7.875" />
+        <Point X="6.062" Y="6.93" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Category" Type="OneMoneyCloneServer.Models.Category" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15" Y="9.901" />
+        <Point X="18.375" Y="9.901" />
+        <Point X="18.375" Y="1.796" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAKAAAAAgAgAgAAAgAAAAGACAAAAAABASAAAAAACEA=</HashCode>
+      <FileName>Transaction.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Currency" />
+      <Property Name="Category" />
+      <Property Name="TransferAccount" />
+      <Property Name="Account" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.Account">
+    <Position X="15.5" Y="5.25" Width="1.5" />
+    <AssociationLine Name="User" Type="OneMoneyCloneServer.Models.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.062" Y="5.25" />
+        <Point X="16.062" Y="1.559" />
+        <Point X="12.75" Y="1.559" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAgAAAAAAAAgAAAwACAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Account.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+      <Property Name="Currency" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.Budget">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Budget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.SavingsBudget">
+    <Position X="8" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>SavingsBudget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OneMoneyCloneServer.Models.BudgetBase">
+    <Position X="9.5" Y="11.75" Width="1.5" />
+    <AssociationLine Name="User" Type="OneMoneyCloneServer.Models.User" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="11.75" />
+        <Point X="10.5" Y="1.811" />
+        <Point X="11.25" Y="1.811" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAADAAAAAAAAAAAAAAAAAAigAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>BudgetBase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="User" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
