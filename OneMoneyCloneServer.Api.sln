@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Models"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Persistence", "OneMoneyCloneServer.Persistence\OneMoneyCloneServer.Persistence.csproj", "{C289F77A-142C-49D1-B8AF-268B3A1E620F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Repositories", "OneMoneyCloneServer.Repositories\OneMoneyCloneServer.Repositories.csproj", "{C601AC02-EB4C-4A94-AC3B-2A85AA610AB6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C601AC02-EB4C-4A94-AC3B-2A85AA610AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C601AC02-EB4C-4A94-AC3B-2A85AA610AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C601AC02-EB4C-4A94-AC3B-2A85AA610AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C601AC02-EB4C-4A94-AC3B-2A85AA610AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
