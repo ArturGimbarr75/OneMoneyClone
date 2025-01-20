@@ -1,6 +1,6 @@
 ﻿namespace OneMoneyCloneServer.Models.Server;
 
-public class Currency
+public sealed class Currency
 {
 	public Guid Id { get; set; }
 	public required string Name { get; set; }
