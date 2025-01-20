@@ -1,0 +1,1034 @@
+[
+    {
+        "Name": "United Arab Emirates Dirham",
+        "Code": "AED",
+        "Decimals": 2,
+        "Symbol": "د.إ."
+    },
+    {
+        "Name": "Afghan Afghani",
+        "Code": "AFN",
+        "Decimals": 2,
+        "Symbol": "Af"
+    },
+    {
+        "Name": "Albanian Lek",
+        "Code": "ALL",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Armenian Dram",
+        "Code": "AMD",
+        "Decimals": 2,
+        "Symbol": "֏"
+    },
+    {
+        "Name": "Netherlands Antillean Guilder",
+        "Code": "ANG",
+        "Decimals": 2,
+        "Symbol": "ƒ"
+    },
+    {
+        "Name": "Angolan Kwanza",
+        "Code": "AOA",
+        "Decimals": 2,
+        "Symbol": "Kz"
+    },
+    {
+        "Name": "Argentine Peso",
+        "Code": "ARS",
+        "Decimals": 2,
+        "Symbol": "AR$"
+    },
+    {
+        "Name": "Australian Dollar",
+        "Code": "AUD",
+        "Decimals": 2,
+        "Symbol": "AU$"
+    },
+    {
+        "Name": "Aruban Florin",
+        "Code": "AWG",
+        "Decimals": 2,
+        "Symbol": "ƒ"
+    },
+    {
+        "Name": "Azerbaijani Manat",
+        "Code": "AZN",
+        "Decimals": 2,
+        "Symbol": "ман"
+    },
+    {
+        "Name": "Bosnia and Herzegovina Convertible Mark",
+        "Code": "BAM",
+        "Decimals": 2,
+        "Symbol": "KM"
+    },
+    {
+        "Name": "Barbadian Dollar",
+        "Code": "BBD",
+        "Decimals": 2,
+        "Symbol": "BBD$"
+    },
+    {
+        "Name": "Bangladeshi Taka",
+        "Code": "BDT",
+        "Decimals": 2,
+        "Symbol": "৳"
+    },
+    {
+        "Name": "Bulgarian Lev",
+        "Code": "BGN",
+        "Decimals": 2,
+        "Symbol": "лв."
+    },
+    {
+        "Name": "Bahraini Dinar",
+        "Code": "BHD",
+        "Decimals": 3,
+        "Symbol": "BD"
+    },
+    {
+        "Name": "Burundian Franc",
+        "Code": "BIF",
+        "Decimals": 2,
+        "Symbol": "FBu"
+    },
+    {
+        "Name": "Bermudian Dollar",
+        "Code": "BMD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Brunei Dollar",
+        "Code": "BND",
+        "Decimals": 2,
+        "Symbol": "B$"
+    },
+    {
+        "Name": "Bolivian Boliviano",
+        "Code": "BOB",
+        "Decimals": 2,
+        "Symbol": "Bs."
+    },
+    {
+        "Name": "Brazilian Real",
+        "Code": "BRL",
+        "Decimals": 2,
+        "Symbol": "R$"
+    },
+    {
+        "Name": "Bahamian Dollar",
+        "Code": "BSD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Bhutanese Ngultrum",
+        "Code": "BTN",
+        "Decimals": 2,
+        "Symbol": "Nu."
+    },
+    {
+        "Name": "Botswana Pula",
+        "Code": "BWP",
+        "Decimals": 2,
+        "Symbol": "P"
+    },
+    {
+        "Name": "Belarusian Ruble",
+        "Code": "BYN",
+        "Decimals": 2,
+        "Symbol": "Br"
+    },
+    {
+        "Name": "Belize Dollar",
+        "Code": "BZD",
+        "Decimals": 2,
+        "Symbol": "BZ$"
+    },
+    {
+        "Name": "Canadian Dollar",
+        "Code": "CAD",
+        "Decimals": 2,
+        "Symbol": "CA$"
+    },
+    {
+        "Name": "Congolese Franc",
+        "Code": "CDF",
+        "Decimals": 2,
+        "Symbol": "FC"
+    },
+    {
+        "Name": "Swiss Franc",
+        "Code": "CHF",
+        "Decimals": 2,
+        "Symbol": "Fr."
+    },
+    {
+        "Name": "Cook Islands Dollar",
+        "Code": "CKD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Chilean Peso",
+        "Code": "CLP",
+        "Decimals": 0,
+        "Symbol": "CL$"
+    },
+    {
+        "Name": "Chinese Yuan",
+        "Code": "CNY",
+        "Decimals": 2,
+        "Symbol": "CN¥"
+    },
+    {
+        "Name": "Colombian Peso",
+        "Code": "COP",
+        "Decimals": 2,
+        "Symbol": "CO$"
+    },
+    {
+        "Name": "Costa Rican Colon",
+        "Code": "CRC",
+        "Decimals": 2,
+        "Symbol": "₡"
+    },
+    {
+        "Name": "Cuban convertible Peso",
+        "Code": "CUC",
+        "Decimals": 2,
+        "Symbol": "CUC$"
+    },
+    {
+        "Name": "Cuban Peso",
+        "Code": "CUP",
+        "Decimals": 2,
+        "Symbol": "$MN"
+    },
+    {
+        "Name": "Cabo Verdean Escudo",
+        "Code": "CVE",
+        "Decimals": 2,
+        "Symbol": "CV$"
+    },
+    {
+        "Name": "Czech Koruna",
+        "Code": "CZK",
+        "Decimals": 2,
+        "Symbol": "Kč"
+    },
+    {
+        "Name": "Djiboutian Franc",
+        "Code": "DJF",
+        "Decimals": 2,
+        "Symbol": "Fdj"
+    },
+    {
+        "Name": "Danish Krone",
+        "Code": "DKK",
+        "Decimals": 2,
+        "Symbol": "kr."
+    },
+    {
+        "Name": "Dominican Peso",
+        "Code": "DOP",
+        "Decimals": 2,
+        "Symbol": "RD$"
+    },
+    {
+        "Name": "Algerian Dinar",
+        "Code": "DZD",
+        "Decimals": 2,
+        "Symbol": "DA"
+    },
+    {
+        "Name": "Egyptian Pound",
+        "Code": "EGP",
+        "Decimals": 2,
+        "Symbol": "E£"
+    },
+    {
+        "Name": "Sahrawi Peseta",
+        "Code": "EHP",
+        "Decimals": 2,
+        "Symbol": "Ptas."
+    },
+    {
+        "Name": "Eritrean Nakfa",
+        "Code": "ERN",
+        "Decimals": 2,
+        "Symbol": "Nkf"
+    },
+    {
+        "Name": "Ethiopian Birr",
+        "Code": "ETB",
+        "Decimals": 2,
+        "Symbol": "Br"
+    },
+    {
+        "Name": "Euro",
+        "Code": "EUR",
+        "Decimals": 2,
+        "Symbol": "€"
+    },
+    {
+        "Name": "Fijian Dollar",
+        "Code": "FJD",
+        "Decimals": 2,
+        "Symbol": "FJ$"
+    },
+    {
+        "Name": "Falkland Islands Pound",
+        "Code": "FKP",
+        "Decimals": 2,
+        "Symbol": "FK£"
+    },
+    {
+        "Name": "Faroese Króna",
+        "Code": "FOK",
+        "Decimals": 2,
+        "Symbol": "kr"
+    },
+    {
+        "Name": "Pound Sterling",
+        "Code": "GBP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Georgian Lari",
+        "Code": "GEL",
+        "Decimals": 2,
+        "Symbol": "₾"
+    },
+    {
+        "Name": "Guernsey Pound",
+        "Code": "GGP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Ghanaian Cedi",
+        "Code": "GHS",
+        "Decimals": 2,
+        "Symbol": "GH₵"
+    },
+    {
+        "Name": "Gibraltar Pound",
+        "Code": "GIP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Gambian Dalasi",
+        "Code": "GMD",
+        "Decimals": 2,
+        "Symbol": "D"
+    },
+    {
+        "Name": "Guinean Franc",
+        "Code": "GNF",
+        "Decimals": 2,
+        "Symbol": "FG"
+    },
+    {
+        "Name": "Guatemalan Quetzal",
+        "Code": "GTQ",
+        "Decimals": 2,
+        "Symbol": "Q"
+    },
+    {
+        "Name": "Guyanese Dollar",
+        "Code": "GYD",
+        "Decimals": 2,
+        "Symbol": "G$"
+    },
+    {
+        "Name": "Hong Kong Dollar",
+        "Code": "HKD",
+        "Decimals": 2,
+        "Symbol": "HK$"
+    },
+    {
+        "Name": "Honduran Lempira",
+        "Code": "HNL",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Croatian Kuna",
+        "Code": "HRK",
+        "Decimals": 2,
+        "Symbol": "kn"
+    },
+    {
+        "Name": "Haitian Gourde",
+        "Code": "HTG",
+        "Decimals": 2,
+        "Symbol": "G"
+    },
+    {
+        "Name": "Hungarian Forint",
+        "Code": "HUF",
+        "Decimals": 2,
+        "Symbol": "Ft"
+    },
+    {
+        "Name": "Indonesian Rupiah",
+        "Code": "IDR",
+        "Decimals": 2,
+        "Symbol": "Rp"
+    },
+    {
+        "Name": "Israeli new Shekel",
+        "Code": "ILS",
+        "Decimals": 2,
+        "Symbol": "₪"
+    },
+    {
+        "Name": "Manx Pound",
+        "Code": "IMP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Indian Rupee",
+        "Code": "INR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "Iraqi Dinar",
+        "Code": "IQD",
+        "Decimals": 3,
+        "Symbol": "د.ع."
+    },
+    {
+        "Name": "Iranian Rial",
+        "Code": "IRR",
+        "Decimals": 2,
+        "Symbol": "﷼"
+    },
+    {
+        "Name": "Icelandic Krona",
+        "Code": "ISK",
+        "Decimals": 2,
+        "Symbol": "kr"
+    },
+    {
+        "Name": "Jersey Pound",
+        "Code": "JEP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Jamaican Dollar",
+        "Code": "JMD",
+        "Decimals": 2,
+        "Symbol": "J$"
+    },
+    {
+        "Name": "Jordanian Dinar",
+        "Code": "JOD",
+        "Decimals": 3,
+        "Symbol": "JD"
+    },
+    {
+        "Name": "Japanese Yen",
+        "Code": "JPY",
+        "Decimals": 2,
+        "Symbol": "¥"
+    },
+    {
+        "Name": "Kenyan Shilling",
+        "Code": "KES",
+        "Decimals": 2,
+        "Symbol": "KSh"
+    },
+    {
+        "Name": "Kyrgyzstani Som",
+        "Code": "KGS",
+        "Decimals": 2,
+        "Symbol": "с"
+    },
+    {
+        "Name": "Cambodian Riel",
+        "Code": "KHR",
+        "Decimals": 2,
+        "Symbol": "៛"
+    },
+    {
+        "Name": "Kiribati Dollar",
+        "Code": "KID",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Comorian Franc",
+        "Code": "KMF",
+        "Decimals": 2,
+        "Symbol": "CF"
+    },
+    {
+        "Name": "North Korean Won",
+        "Code": "KPW",
+        "Decimals": 2,
+        "Symbol": "₩"
+    },
+    {
+        "Name": "South Korean Won",
+        "Code": "KRW",
+        "Decimals": 2,
+        "Symbol": "₩"
+    },
+    {
+        "Name": "Kuwaiti Dinar",
+        "Code": "KWD",
+        "Decimals": 3,
+        "Symbol": "KD"
+    },
+    {
+        "Name": "Cayman Islands Dollar",
+        "Code": "KYD",
+        "Decimals": 2,
+        "Symbol": "CI$"
+    },
+    {
+        "Name": "Kazakhstani Tenge",
+        "Code": "KZT",
+        "Decimals": 2,
+        "Symbol": "₸"
+    },
+    {
+        "Name": "Lao Kip",
+        "Code": "LAK",
+        "Decimals": 2,
+        "Symbol": "₭N"
+    },
+    {
+        "Name": "Lebanese Pound",
+        "Code": "LBP",
+        "Decimals": 2,
+        "Symbol": "LL."
+    },
+    {
+        "Name": "Sri Lankan Rupee",
+        "Code": "LKR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "Liberian Dollar",
+        "Code": "LRD",
+        "Decimals": 2,
+        "Symbol": "L$"
+    },
+    {
+        "Name": "Lesotho Loti",
+        "Code": "LSL",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Libyan Dinar",
+        "Code": "LYD",
+        "Decimals": 3,
+        "Symbol": "LD"
+    },
+    {
+        "Name": "Moroccan Dirham",
+        "Code": "MAD",
+        "Decimals": 2,
+        "Symbol": "DH"
+    },
+    {
+        "Name": "Moldovan Leu",
+        "Code": "MDL",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Malagasy Ariary",
+        "Code": "MGA",
+        "Decimals": 0,
+        "Symbol": "Ar"
+    },
+    {
+        "Name": "Macedonian Denar",
+        "Code": "MKD",
+        "Decimals": 2,
+        "Symbol": "den"
+    },
+    {
+        "Name": "Myanmar Kyat",
+        "Code": "MMK",
+        "Decimals": 2,
+        "Symbol": "Ks"
+    },
+    {
+        "Name": "Mongolian Tögrög",
+        "Code": "MNT",
+        "Decimals": 2,
+        "Symbol": "₮"
+    },
+    {
+        "Name": "Macanese Pataca",
+        "Code": "MOP",
+        "Decimals": 2,
+        "Symbol": "MOP$"
+    },
+    {
+        "Name": "Mauritanian Ouguiya",
+        "Code": "MRU",
+        "Decimals": 0,
+        "Symbol": "UM"
+    },
+    {
+        "Name": "Mauritian Rupee",
+        "Code": "MUR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "Maldivian Rufiyaa",
+        "Code": "MVR",
+        "Decimals": 2,
+        "Symbol": "MRf"
+    },
+    {
+        "Name": "Malawian Kwacha",
+        "Code": "MWK",
+        "Decimals": 2,
+        "Symbol": "MK"
+    },
+    {
+        "Name": "Mexican Peso",
+        "Code": "MXN",
+        "Decimals": 2,
+        "Symbol": "MX$"
+    },
+    {
+        "Name": "Malaysian Ringgit",
+        "Code": "MYR",
+        "Decimals": 2,
+        "Symbol": "RM"
+    },
+    {
+        "Name": "Mozambican Metical",
+        "Code": "MZN",
+        "Decimals": 2,
+        "Symbol": "MTn"
+    },
+    {
+        "Name": "Namibian Dollar",
+        "Code": "NAD",
+        "Decimals": 2,
+        "Symbol": "N$"
+    },
+    {
+        "Name": "Nigerian Naira",
+        "Code": "NGN",
+        "Decimals": 2,
+        "Symbol": "₦"
+    },
+    {
+        "Name": "Nicaraguan Córdoba",
+        "Code": "NIO",
+        "Decimals": 2,
+        "Symbol": "C$"
+    },
+    {
+        "Name": "Norwegian Krone",
+        "Code": "NOK",
+        "Decimals": 2,
+        "Symbol": "kr"
+    },
+    {
+        "Name": "Nepalese Rupee",
+        "Code": "NPR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "New Zealand Dollar",
+        "Code": "NZD",
+        "Decimals": 2,
+        "Symbol": "NZ$"
+    },
+    {
+        "Name": "Omani Rial",
+        "Code": "OMR",
+        "Decimals": 3,
+        "Symbol": "OR"
+    },
+    {
+        "Name": "Panamanian Balboa",
+        "Code": "PAB",
+        "Decimals": 2,
+        "Symbol": "B/."
+    },
+    {
+        "Name": "Peruvian Sol",
+        "Code": "PEN",
+        "Decimals": 2,
+        "Symbol": "S/."
+    },
+    {
+        "Name": "Papua New Guinean Kina",
+        "Code": "PGK",
+        "Decimals": 2,
+        "Symbol": "K"
+    },
+    {
+        "Name": "Philippine Peso",
+        "Code": "PHP",
+        "Decimals": 2,
+        "Symbol": "₱"
+    },
+    {
+        "Name": "Pakistani Rupee",
+        "Code": "PKR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "Polish Zloty",
+        "Code": "PLN",
+        "Decimals": 2,
+        "Symbol": "zł"
+    },
+    {
+        "Name": "Pitcairn Islands Dollar",
+        "Code": "PND",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Transnistrian Ruble",
+        "Code": "PRB",
+        "Decimals": 2,
+        "Symbol": "р."
+    },
+    {
+        "Name": "Paraguayan Guaraní",
+        "Code": "PYG",
+        "Decimals": 2,
+        "Symbol": "₲"
+    },
+    {
+        "Name": "Qatari Riyal",
+        "Code": "QAR",
+        "Decimals": 2,
+        "Symbol": "QR"
+    },
+    {
+        "Name": "Romanian Leu",
+        "Code": "RON",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Serbian Dinar",
+        "Code": "RSD",
+        "Decimals": 2,
+        "Symbol": "din"
+    },
+    {
+        "Name": "Russian Ruble",
+        "Code": "RUB",
+        "Decimals": 2,
+        "Symbol": "₽"
+    },
+    {
+        "Name": "Rwandan Franc",
+        "Code": "RWF",
+        "Decimals": 2,
+        "Symbol": "FRw"
+    },
+    {
+        "Name": "Saudi Riyal",
+        "Code": "SAR",
+        "Decimals": 2,
+        "Symbol": "SR"
+    },
+    {
+        "Name": "Solomon Islands Dollar",
+        "Code": "SBD",
+        "Decimals": 2,
+        "Symbol": "SI$"
+    },
+    {
+        "Name": "Seychellois Rupee",
+        "Code": "SCR",
+        "Decimals": 2,
+        "Symbol": "Rs."
+    },
+    {
+        "Name": "Sudanese Pound",
+        "Code": "SDG",
+        "Decimals": 2,
+        "Symbol": "£SD"
+    },
+    {
+        "Name": "Swedish Krona",
+        "Code": "SEK",
+        "Decimals": 2,
+        "Symbol": "kr"
+    },
+    {
+        "Name": "Singapore Dollar",
+        "Code": "SGD",
+        "Decimals": 2,
+        "Symbol": "S$"
+    },
+    {
+        "Name": "Saint Helena Pound",
+        "Code": "SHP",
+        "Decimals": 2,
+        "Symbol": "£"
+    },
+    {
+        "Name": "Sierra Leonean Leone",
+        "Code": "SLL",
+        "Decimals": 2,
+        "Symbol": "Le"
+    },
+    {
+        "Name": "Somaliland Shilling",
+        "Code": "SLS",
+        "Decimals": 2,
+        "Symbol": "Sl"
+    },
+    {
+        "Name": "Somali Shilling",
+        "Code": "SOS",
+        "Decimals": 2,
+        "Symbol": "Sh.So."
+    },
+    {
+        "Name": "Surinamese Dollar",
+        "Code": "SRD",
+        "Decimals": 2,
+        "Symbol": "Sr$"
+    },
+    {
+        "Name": "South Sudanese Pound",
+        "Code": "SSP",
+        "Decimals": 2,
+        "Symbol": "SS£"
+    },
+    {
+        "Name": "Sao Tome and Príncipe Dobra",
+        "Code": "STN",
+        "Decimals": 2,
+        "Symbol": "Db"
+    },
+    {
+        "Name": "Salvadoran Colón",
+        "Code": "SVC",
+        "Decimals": 2,
+        "Symbol": "₡"
+    },
+    {
+        "Name": "Syrian Pound",
+        "Code": "SYP",
+        "Decimals": 2,
+        "Symbol": "LS"
+    },
+    {
+        "Name": "Swazi Lilangeni",
+        "Code": "SZL",
+        "Decimals": 2,
+        "Symbol": "L"
+    },
+    {
+        "Name": "Thai Baht",
+        "Code": "THB",
+        "Decimals": 2,
+        "Symbol": "฿"
+    },
+    {
+        "Name": "Tajikistani Somoni",
+        "Code": "TJS",
+        "Decimals": 2,
+        "Symbol": "SM"
+    },
+    {
+        "Name": "Turkmenistan Manat",
+        "Code": "TMT",
+        "Decimals": 2,
+        "Symbol": "m."
+    },
+    {
+        "Name": "Tunisian Dinar",
+        "Code": "TND",
+        "Decimals": 3,
+        "Symbol": "DT"
+    },
+    {
+        "Name": "Tongan Paʻanga",
+        "Code": "TOP",
+        "Decimals": 2,
+        "Symbol": "T$"
+    },
+    {
+        "Name": "Turkish Lira",
+        "Code": "TRY",
+        "Decimals": 2,
+        "Symbol": "TL"
+    },
+    {
+        "Name": "Trinidad and Tobago Dollar",
+        "Code": "TTD",
+        "Decimals": 2,
+        "Symbol": "TT$"
+    },
+    {
+        "Name": "Tuvaluan Dollar",
+        "Code": "TVD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "New Taiwan Dollar",
+        "Code": "TWD",
+        "Decimals": 2,
+        "Symbol": "NT$"
+    },
+    {
+        "Name": "Tanzanian Shilling",
+        "Code": "TZS",
+        "Decimals": 2,
+        "Symbol": "TSh"
+    },
+    {
+        "Name": "Ukrainian Hryvnia",
+        "Code": "UAH",
+        "Decimals": 2,
+        "Symbol": "₴"
+    },
+    {
+        "Name": "Ugandan Shilling",
+        "Code": "UGX",
+        "Decimals": 2,
+        "Symbol": "USh"
+    },
+    {
+        "Name": "United States Dollar",
+        "Code": "USD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "Uruguayan Peso",
+        "Code": "UYU",
+        "Decimals": 2,
+        "Symbol": "$U"
+    },
+    {
+        "Name": "Uzbekistani Som",
+        "Code": "UZS",
+        "Decimals": 2,
+        "Symbol": "сум"
+    },
+    {
+        "Name": "Venezuelan bolívar digital",
+        "Code": "VED",
+        "Decimals": 2,
+        "Symbol": "Bs."
+    },
+    {
+        "Name": "Venezuelan Bolívar Soberano",
+        "Code": "VES",
+        "Decimals": 2,
+        "Symbol": "Bs.F"
+    },
+    {
+        "Name": "Vietnamese Dong",
+        "Code": "VND",
+        "Decimals": 2,
+        "Symbol": "₫"
+    },
+    {
+        "Name": "Vanuatu Vatu",
+        "Code": "VUV",
+        "Decimals": 0,
+        "Symbol": "VT"
+    },
+    {
+        "Name": "Samoan Tala",
+        "Code": "WST",
+        "Decimals": 2,
+        "Symbol": "T"
+    },
+    {
+        "Name": "Central African CFA Franc BEAC",
+        "Code": "XAF",
+        "Decimals": 2,
+        "Symbol": "Fr"
+    },
+    {
+        "Name": "East Caribbean Dollar",
+        "Code": "XCD",
+        "Decimals": 2,
+        "Symbol": "$"
+    },
+    {
+        "Name": "West African CFA Franc BCEAO",
+        "Code": "XOF",
+        "Decimals": 2,
+        "Symbol": "₣"
+    },
+    {
+        "Name": "CFP Franc (Franc Pacifique)",
+        "Code": "XPF",
+        "Decimals": 0,
+        "Symbol": "₣"
+    },
+    {
+        "Name": "Yemeni Rial",
+        "Code": "YER",
+        "Decimals": 2,
+        "Symbol": "YR"
+    },
+    {
+        "Name": "South African Rand",
+        "Code": "ZAR",
+        "Decimals": 2,
+        "Symbol": "R"
+    },
+    {
+        "Name": "Zambian Kwacha",
+        "Code": "ZMW",
+        "Decimals": 2,
+        "Symbol": "ZK"
+    },
+    {
+        "Name": "RTGS Dollar",
+        "Code": "ZWB",
+        "Decimals": 0,
+        "Symbol": ""
+    },
+    {
+        "Name": "Zimbabwean Dollar",
+        "Code": "ZWL",
+        "Decimals": 2,
+        "Symbol": "Z$"
+    },
+    {
+        "Name": "Abkhazian Apsar",
+        "Code": "Abkhazia",
+        "Decimals": 0,
+        "Symbol": ""
+    },
+    {
+        "Name": "Artsakh Dram",
+        "Code": "Artsakh",
+        "Decimals": 2,
+        "Symbol": "դր."
+    }
+]
