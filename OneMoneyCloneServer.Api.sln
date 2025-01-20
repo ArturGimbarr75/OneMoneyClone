@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Api", "OneMoneyCloneServer.Api\OneMoneyCloneServer.Api.csproj", "{D85CF19F-D9F3-42EC-AAC7-9245A6AD870D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Application", "OneMoneyCloneServer.Application\OneMoneyCloneServer.Application.csproj", "{C30DCA38-C4AD-4588-888D-5438D81ED2C5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Models", "OneMoneyCloneServer.Models\OneMoneyCloneServer.Models.csproj", "{0E3ACB13-2BDA-478F-A9FD-7891EC4B6659}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.Persistence", "OneMoneyCloneServer.Persistence\OneMoneyCloneServer.Persistence.csproj", "{C289F77A-142C-49D1-B8AF-268B3A1E620F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{0E3ACB13-2BDA-478F-A9FD-7891EC4B6659}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E3ACB13-2BDA-478F-A9FD-7891EC4B6659}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E3ACB13-2BDA-478F-A9FD-7891EC4B6659}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C289F77A-142C-49D1-B8AF-268B3A1E620F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
