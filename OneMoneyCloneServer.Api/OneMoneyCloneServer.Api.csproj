@@ -17,6 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\OneMoneyCloneServer.Application\OneMoneyCloneServer.Application.csproj" />
+    <ProjectReference Include="..\OneMoneyCloneServer.Models\OneMoneyCloneServer.Models.csproj" />
+    <ProjectReference Include="..\OneMoneyCloneServer.Persistence\OneMoneyCloneServer.Persistence.csproj" />
+    <ProjectReference Include="..\OneMoneyCloneServer.Repositories\OneMoneyCloneServer.Repositories.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="currencies.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
