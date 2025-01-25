@@ -1,6 +1,3 @@
-using Microsoft.AspNetCore.Builder;
-using Swashbuckle.AspNetCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSwaggerGen();
