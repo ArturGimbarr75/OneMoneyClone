@@ -10,5 +10,5 @@ public interface IBudgetRepository
 	Task<Budget?> DeleteBudgetAsync(Guid id);
 	Task<IEnumerable<Budget>> GetBudgetsByUserIdAsync(Guid userId);
 	Task<IEnumerable<Budget>> GetBudgetsByUserIdAndPeriodAsync(Guid userId, DateOnly startDate, DateOnly endDate);
-	Task<bool> IsBudgetForPeriodExists(Guid userId, Guid expenceBudgetId, DateOnly startDate, DateOnly endDate);
+	Task<bool> IsBudgetForPeriodExists(Guid categoryId, DateOnly startDate, DateOnly endDate);
 }
