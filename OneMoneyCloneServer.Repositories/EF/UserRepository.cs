@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using OneMoneyCloneServer.Models.Server;
-using OneMoneyCloneServer.Persistence;
 using OneMoneyCloneServer.Repositories.Interfaces;
 
 namespace OneMoneyCloneServer.Repositories.EF;
