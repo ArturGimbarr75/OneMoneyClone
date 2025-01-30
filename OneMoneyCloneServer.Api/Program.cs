@@ -1,4 +1,5 @@
 using OneMoneyCloneServer.Api;
+using OneMoneyCloneServer.Application;
 using OneMoneyCloneServer.Persistence;
 using OneMoneyCloneServer.Repositories;
 
@@ -10,6 +11,7 @@ builder.Services.AddOpenApi();
 
 string connectionString = builder.Configuration.GetConnectionString("DebugConnection")!;
 builder.Services.AddDatabase(connectionString);
+builder.Services.AddServices();
 builder.Services.AddRepositories();
 builder.Services.AddIdentity();
 
