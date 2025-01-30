@@ -6,7 +6,7 @@ namespace OneMoneyCloneServer.Repositories;
 
 public static class Registrator
 {
-	public static void RegisterRepositories(IServiceCollection services)
+	public static void AddRepositories(this IServiceCollection services)
 	{
 		services.AddScoped<IUserRepository, UserRepository>();
 	}

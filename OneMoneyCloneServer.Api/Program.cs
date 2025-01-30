@@ -1,3 +1,7 @@
+using OneMoneyCloneServer.Api;
+using OneMoneyCloneServer.Persistence;
+using OneMoneyCloneServer.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSwaggerGen();
@@ -5,23 +9,14 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 string connectionString = builder.Configuration.GetConnectionString("DebugConnection")!;
-OneMoneyCloneServer.Persistence.Registrator.RegisterDatabase(builder.Services, connectionString);
-OneMoneyCloneServer.Repositories.Registrator.RegisterRepositories(builder.Services);
-OneMoneyCloneServer.Api.Registrator.RegisterIdentity(builder.Services);
+builder.Services.AddDatabase(connectionString);
+builder.Services.AddRepositories();
+builder.Services.AddIdentity();
 
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-	app.UseSwaggerUI(c =>
-	{
-		c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-	});
-
-	app.MapGet("/", () => Results.Redirect("/swagger"));
-	app.UseDeveloperExceptionPage();
-}
+	app.AddSwagger();
 
 app.UseHttpsRedirection();
 app.UseAuthorization();
