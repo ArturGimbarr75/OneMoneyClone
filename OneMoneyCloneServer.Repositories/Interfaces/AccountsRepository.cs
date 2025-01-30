@@ -2,7 +2,7 @@
 
 namespace OneMoneyCloneServer.Repositories.Interfaces;
 
-public interface IAccountsRepository
+public interface IAccountRepository
 {
 	Task<Account?> GetAccountByIdAsync(Guid id);
 	Task<Account?> CreateAccountAsync(Account account);
