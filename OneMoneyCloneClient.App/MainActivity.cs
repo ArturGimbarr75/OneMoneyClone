@@ -1,5 +1,6 @@
-using Android;
+using Android.Content;
 using Android.Content.PM;
+using OneMoneyCloneClient.App.LayoutsCode;
 
 namespace OneMoneyCloneClient.App;
 
@@ -10,15 +11,14 @@ public class MainActivity : BaseActivity
 	{
 		base.OnCreate(savedInstanceState);
 		RequestedOrientation = ScreenOrientation.Portrait;
-
-		int layoutId = GetDefaultLayoutId();
-		SetContentView(layoutId);
+		int defaultLayoutId = GetDefaultLayoutId();
+		SetContentView(defaultLayoutId);
 		ActionBar?.Hide();
 	}
 
 	private int GetDefaultLayoutId()
 	{
 		// TODO: Implement this method, make oportunity to select default layout
-		return Resource.Layout.accounts;
+		return Resource.Layout.activity_accounts;
 	}
 }

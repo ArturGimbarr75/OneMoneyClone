@@ -1,0 +1,57 @@
+﻿<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2B2B2B">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="#1F1F1F"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/headerLeftButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/tempicon"
+            android:tint="#FFFFFF"
+            android:background="@null"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/headerTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="All accounts"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/headerBalanceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EUR 216.86"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/headerRightButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/tempicon"
+            android:tint="#FFFFFF"
+            android:background="@null"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+</RelativeLayout>

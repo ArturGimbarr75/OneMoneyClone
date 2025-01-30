@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp">
+
+  <ImageButton
+      android:id="@+id/accountsButton"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:src="@mipmap/tempicon"
+      android:contentDescription="Accounts" />
+
+  <ImageButton
+      android:id="@+id/categoriesButton"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:src="@mipmap/tempicon"
+      android:contentDescription="Categories" />
+
+  <ImageButton
+      android:id="@+id/transactionsButton"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:src="@mipmap/tempicon"
+      android:contentDescription="Transactions" />
+
+  <ImageButton
+      android:id="@+id/budgetsButton"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:src="@mipmap/tempicon"
+      android:contentDescription="Budgets" />
+
+  <ImageButton
+      android:id="@+id/overviewButton"
+      android:layout_width="64dp"
+      android:layout_height="64dp"
+      android:src="@mipmap/tempicon"
+      android:contentDescription="Overview" />
+</LinearLayout>
