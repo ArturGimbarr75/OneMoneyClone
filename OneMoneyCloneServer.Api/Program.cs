@@ -6,6 +6,7 @@ builder.Services.AddOpenApi();
 
 string connectionString = builder.Configuration.GetConnectionString("DebugConnection")!;
 OneMoneyCloneServer.Persistence.Registrator.RegisterDatabase(builder.Services, connectionString);
+OneMoneyCloneServer.Repositories.Registrator.RegisterRepositories(builder.Services);
 
 var app = builder.Build();
 
