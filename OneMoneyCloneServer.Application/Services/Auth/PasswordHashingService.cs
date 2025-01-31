@@ -3,11 +3,11 @@ using OneMoneyCloneServer.Models.Server;
 
 namespace OneMoneyCloneServer.Application.Services.Auth;
 
-public class PasswordHasherService : IPasswordHasherService
+public class PasswordHashingService : IPasswordHashingService
 {
 	private readonly IPasswordHasher<User> _passwordHasher;
 
-	public PasswordHasherService(IPasswordHasher<User> passwordHasher)
+	public PasswordHashingService(IPasswordHasher<User> passwordHasher)
 	{
 		_passwordHasher = passwordHasher;
 	}

@@ -10,6 +10,6 @@ public static class Registrator
 	public static void AddServices(this IServiceCollection services)
 	{
 		services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
-		services.AddScoped<IPasswordHasherService, PasswordHasherService>();
+		services.AddScoped<IPasswordHashingService, PasswordHashingService>();
 	}
 }
