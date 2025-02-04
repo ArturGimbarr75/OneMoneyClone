@@ -56,7 +56,7 @@ public class UserService : IUserService
 		}
 	}
 
-	public Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(RefreshTokenDto model)
+	public Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(string refreshToken)
 	{
 		throw new NotImplementedException();
 	}

@@ -9,5 +9,5 @@ public interface IUserService
 {
 	Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model);
 	Task<InfoResult<AuthResponseDto, LoginErrors>> LoginAsync(LoginDto model);
-	Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(RefreshTokenDto model);
+	Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(string model);
 }
