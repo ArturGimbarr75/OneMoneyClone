@@ -56,12 +56,12 @@ public class UserService : IUserService
 		}
 	}
 
-	public Task<AuthResponseDto> RefreshTokenAsync(RefreshTokenDto model)
+	public Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(RefreshTokenDto model)
 	{
 		throw new NotImplementedException();
 	}
 
-	public async Task<AuthResponseDto> RegisterAsync(RegisterDto model)
+	public Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model)
 	{
 		throw new NotImplementedException();
 		/*var user = new User { Email = model.Email, UserName = model.Email, MainCurrencyId = model.MainCurrencyId };

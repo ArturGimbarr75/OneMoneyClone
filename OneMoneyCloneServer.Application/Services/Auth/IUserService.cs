@@ -1,12 +1,13 @@
 ﻿using OneMoneyCloneServer.Application.Infrastructure;
 using OneMoneyCloneServer.Application.Services.Auth.Errors;
 using OneMoneyCloneServer.DTO.Auth;
+using OneMoneyCloneServer.Models.Server;
 
 namespace OneMoneyCloneServer.Application.Services.Auth;
 
 public interface IUserService
 {
-	Task<AuthResponseDto> RegisterAsync(RegisterDto model);
+	Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model);
 	Task<InfoResult<AuthResponseDto, LoginErrors>> LoginAsync(LoginDto model);
-	Task<AuthResponseDto> RefreshTokenAsync(RefreshTokenDto model);
+	Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(RefreshTokenDto model);
 }
