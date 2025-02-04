@@ -88,7 +88,6 @@ public class UserService : IUserService
 		// TODO: Fix get methods
 		var accessTokenExpiration = int.Parse(_configuration["Jwt:AccessTokenExpiration"]!);
 		var refreshTokenExpiration = int.Parse(_configuration["Jwt:RefreshTokenExpiration"]!);
-		;
 
 		var tokenDescriptor = new SecurityTokenDescriptor()
 		{
