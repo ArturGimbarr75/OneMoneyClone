@@ -284,9 +284,6 @@ namespace OneMoneyCloneServer.Persistence.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<int>("Decimals")
                         .HasColumnType("int");
 
@@ -300,9 +297,6 @@ namespace OneMoneyCloneServer.Persistence.Migrations
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
-                    b.Property<DateTime>("UpdatedAt")
-                        .HasColumnType("datetime(6)");
-
                     b.HasKey("Id");
 
                     b.ToTable("Currencies", (string)null);
@@ -312,1721 +306,1377 @@ namespace OneMoneyCloneServer.Persistence.Migrations
                         {
                             Id = new Guid("e7f7d728-50bb-6ab4-f38d-9d150256df4e"),
                             Code = "AED",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 14, DateTimeKind.Utc).AddTicks(3176),
                             Decimals = 2,
                             Name = "United Arab Emirates Dirham",
-                            Symbol = "د.إ.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 14, DateTimeKind.Utc).AddTicks(3177)
+                            Symbol = "د.إ."
                         },
                         new
                         {
                             Id = new Guid("23a6f372-126a-5fb7-033d-9a2529a3b875"),
                             Code = "AFN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(2746),
                             Decimals = 2,
                             Name = "Afghan Afghani",
-                            Symbol = "Af",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(2747)
+                            Symbol = "Af"
                         },
                         new
                         {
                             Id = new Guid("55f9b15f-5eb4-e338-1789-286a1790398d"),
                             Code = "ALL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(2978),
                             Decimals = 2,
                             Name = "Albanian Lek",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(2978)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("4143af48-45f7-3f16-945f-a838eeabb062"),
                             Code = "AMD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3028),
                             Decimals = 2,
                             Name = "Armenian Dram",
-                            Symbol = "֏",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3028)
+                            Symbol = "֏"
                         },
                         new
                         {
                             Id = new Guid("264a68ea-3fe2-4a56-fb94-93fad725556e"),
                             Code = "ANG",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3048),
                             Decimals = 2,
                             Name = "Netherlands Antillean Guilder",
-                            Symbol = "ƒ",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3049)
+                            Symbol = "ƒ"
                         },
                         new
                         {
                             Id = new Guid("af34431f-41e8-f7c3-6efb-f4f5504e9a0a"),
                             Code = "AOA",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3070),
                             Decimals = 2,
                             Name = "Angolan Kwanza",
-                            Symbol = "Kz",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3070)
+                            Symbol = "Kz"
                         },
                         new
                         {
                             Id = new Guid("f667c2a3-5fac-b765-19c6-c65eb6d1c5a6"),
                             Code = "ARS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3089),
                             Decimals = 2,
                             Name = "Argentine Peso",
-                            Symbol = "AR$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3089)
+                            Symbol = "AR$"
                         },
                         new
                         {
                             Id = new Guid("497cabbf-8f99-6358-fb8d-10c7f0ed8873"),
                             Code = "AUD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3107),
                             Decimals = 2,
                             Name = "Australian Dollar",
-                            Symbol = "AU$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3108)
+                            Symbol = "AU$"
                         },
                         new
                         {
                             Id = new Guid("f36e5a06-b4d8-3dcf-1bde-04d9705bebcc"),
                             Code = "AWG",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3125),
                             Decimals = 2,
                             Name = "Aruban Florin",
-                            Symbol = "ƒ",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3126)
+                            Symbol = "ƒ"
                         },
                         new
                         {
                             Id = new Guid("20758c97-14c5-0a1a-f188-f86e764e90da"),
                             Code = "AZN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3145),
                             Decimals = 2,
                             Name = "Azerbaijani Manat",
-                            Symbol = "ман",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3145)
+                            Symbol = "ман"
                         },
                         new
                         {
                             Id = new Guid("7f8a7b1a-7e17-4e02-1685-e780c47649c6"),
                             Code = "BAM",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3164),
                             Decimals = 2,
                             Name = "Bosnia and Herzegovina Convertible Mark",
-                            Symbol = "KM",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3165)
+                            Symbol = "KM"
                         },
                         new
                         {
                             Id = new Guid("991de080-b526-e74f-2941-0d78954faada"),
                             Code = "BBD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3185),
                             Decimals = 2,
                             Name = "Barbadian Dollar",
-                            Symbol = "BBD$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3185)
+                            Symbol = "BBD$"
                         },
                         new
                         {
                             Id = new Guid("e59274d8-5375-83dd-4ebe-968ab2cc8107"),
                             Code = "BDT",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3203),
                             Decimals = 2,
                             Name = "Bangladeshi Taka",
-                            Symbol = "৳",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3204)
+                            Symbol = "৳"
                         },
                         new
                         {
                             Id = new Guid("865e727c-1a56-f1f1-b941-5bf0ea0679c9"),
                             Code = "BGN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3221),
                             Decimals = 2,
                             Name = "Bulgarian Lev",
-                            Symbol = "лв.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3222)
+                            Symbol = "лв."
                         },
                         new
                         {
                             Id = new Guid("fca255c7-60b6-4f09-0d71-2c90fcd40753"),
                             Code = "BHD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3240),
                             Decimals = 3,
                             Name = "Bahraini Dinar",
-                            Symbol = "BD",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3240)
+                            Symbol = "BD"
                         },
                         new
                         {
                             Id = new Guid("bb3eb81a-8de5-8518-632b-175f762eb77a"),
                             Code = "BIF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3257),
                             Decimals = 2,
                             Name = "Burundian Franc",
-                            Symbol = "FBu",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3257)
+                            Symbol = "FBu"
                         },
                         new
                         {
                             Id = new Guid("e504b448-b390-35e4-ec21-9a6f1cec68b4"),
                             Code = "BMD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3280),
                             Decimals = 2,
                             Name = "Bermudian Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3280)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("b11bc376-a47a-c585-8620-656a77c13b11"),
                             Code = "BND",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3299),
                             Decimals = 2,
                             Name = "Brunei Dollar",
-                            Symbol = "B$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3299)
+                            Symbol = "B$"
                         },
                         new
                         {
                             Id = new Guid("cf385935-b7e3-623a-4297-591972d27c01"),
                             Code = "BOB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3383),
                             Decimals = 2,
                             Name = "Bolivian Boliviano",
-                            Symbol = "Bs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3383)
+                            Symbol = "Bs."
                         },
                         new
                         {
                             Id = new Guid("a34a0b1a-bb61-1553-e304-831a320f89b3"),
                             Code = "BRL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3403),
                             Decimals = 2,
                             Name = "Brazilian Real",
-                            Symbol = "R$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3403)
+                            Symbol = "R$"
                         },
                         new
                         {
                             Id = new Guid("3be039c5-b2e7-c869-a84f-85437bc8d298"),
                             Code = "BSD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3421),
                             Decimals = 2,
                             Name = "Bahamian Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3421)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("9c6da159-d466-bf88-850d-7fb1e36c4e38"),
                             Code = "BTN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3440),
                             Decimals = 2,
                             Name = "Bhutanese Ngultrum",
-                            Symbol = "Nu.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3440)
+                            Symbol = "Nu."
                         },
                         new
                         {
                             Id = new Guid("3fcdf238-6be6-8a7b-64b4-6bc06880d4b7"),
                             Code = "BWP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3458),
                             Decimals = 2,
                             Name = "Botswana Pula",
-                            Symbol = "P",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3458)
+                            Symbol = "P"
                         },
                         new
                         {
                             Id = new Guid("d12a4f79-1e8c-bbd9-c158-1fe4589fba1b"),
                             Code = "BYN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3475),
                             Decimals = 2,
                             Name = "Belarusian Ruble",
-                            Symbol = "Br",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3476)
+                            Symbol = "Br"
                         },
                         new
                         {
                             Id = new Guid("678cf412-186c-e9ce-f424-d11554c49415"),
                             Code = "BZD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3493),
                             Decimals = 2,
                             Name = "Belize Dollar",
-                            Symbol = "BZ$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3493)
+                            Symbol = "BZ$"
                         },
                         new
                         {
                             Id = new Guid("5409cbec-a9fc-00f2-5aea-084605df5ee9"),
                             Code = "CAD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3510),
                             Decimals = 2,
                             Name = "Canadian Dollar",
-                            Symbol = "CA$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3511)
+                            Symbol = "CA$"
                         },
                         new
                         {
                             Id = new Guid("d3c63cb7-d3c1-f4fb-c49a-ea0b307498dd"),
                             Code = "CDF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3528),
                             Decimals = 2,
                             Name = "Congolese Franc",
-                            Symbol = "FC",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3528)
+                            Symbol = "FC"
                         },
                         new
                         {
                             Id = new Guid("2e05c22f-45aa-9a73-9fd0-854d4ed60178"),
                             Code = "CHF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3545),
                             Decimals = 2,
                             Name = "Swiss Franc",
-                            Symbol = "Fr.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3545)
+                            Symbol = "Fr."
                         },
                         new
                         {
                             Id = new Guid("7d2c2e91-b5f8-e9d7-63a9-cd82bf0f612f"),
                             Code = "CKD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3563),
                             Decimals = 2,
                             Name = "Cook Islands Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3563)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("fa0c8d5a-d7ad-d6ef-c44c-000085157da7"),
                             Code = "CLP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3581),
                             Decimals = 0,
                             Name = "Chilean Peso",
-                            Symbol = "CL$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3581)
+                            Symbol = "CL$"
                         },
                         new
                         {
                             Id = new Guid("33e99e88-891f-9214-f89b-1e578fa377e0"),
                             Code = "CNY",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3619),
                             Decimals = 2,
                             Name = "Chinese Yuan",
-                            Symbol = "CN¥",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3619)
+                            Symbol = "CN¥"
                         },
                         new
                         {
                             Id = new Guid("c1c5af97-029a-4c01-fde1-c064281437c5"),
                             Code = "COP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3638),
                             Decimals = 2,
                             Name = "Colombian Peso",
-                            Symbol = "CO$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3638)
+                            Symbol = "CO$"
                         },
                         new
                         {
                             Id = new Guid("845d4b1a-32a0-4a8c-33bd-669c608a34c3"),
                             Code = "CRC",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3656),
                             Decimals = 2,
                             Name = "Costa Rican Colon",
-                            Symbol = "₡",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3656)
+                            Symbol = "₡"
                         },
                         new
                         {
                             Id = new Guid("3bad9f41-82f0-1748-27a2-d47adce883a8"),
                             Code = "CUC",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3676),
                             Decimals = 2,
                             Name = "Cuban convertible Peso",
-                            Symbol = "CUC$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3676)
+                            Symbol = "CUC$"
                         },
                         new
                         {
                             Id = new Guid("2d96115b-e8cb-e55d-5770-d22d3e5fb85a"),
                             Code = "CUP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3694),
                             Decimals = 2,
                             Name = "Cuban Peso",
-                            Symbol = "$MN",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3694)
+                            Symbol = "$MN"
                         },
                         new
                         {
                             Id = new Guid("df7be16e-7d4a-06a2-068f-e02847a4aed5"),
                             Code = "CVE",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3712),
                             Decimals = 2,
                             Name = "Cabo Verdean Escudo",
-                            Symbol = "CV$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3712)
+                            Symbol = "CV$"
                         },
                         new
                         {
                             Id = new Guid("508e79f7-53e5-34b2-27e7-df0a7a2652f5"),
                             Code = "CZK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3729),
                             Decimals = 2,
                             Name = "Czech Koruna",
-                            Symbol = "Kč",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3729)
+                            Symbol = "Kč"
                         },
                         new
                         {
                             Id = new Guid("457a12d5-3622-804c-5de5-104bb5503310"),
                             Code = "DJF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3747),
                             Decimals = 2,
                             Name = "Djiboutian Franc",
-                            Symbol = "Fdj",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3747)
+                            Symbol = "Fdj"
                         },
                         new
                         {
                             Id = new Guid("4164005b-94e6-45cb-a1af-078e58a66a87"),
                             Code = "DKK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3798),
                             Decimals = 2,
                             Name = "Danish Krone",
-                            Symbol = "kr.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3799)
+                            Symbol = "kr."
                         },
                         new
                         {
                             Id = new Guid("559286f0-9158-16e1-1c5a-ef5b2748d7cb"),
                             Code = "DOP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3817),
                             Decimals = 2,
                             Name = "Dominican Peso",
-                            Symbol = "RD$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3817)
+                            Symbol = "RD$"
                         },
                         new
                         {
                             Id = new Guid("a83f0076-dba8-821c-36e0-ce931221b956"),
                             Code = "DZD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3834),
                             Decimals = 2,
                             Name = "Algerian Dinar",
-                            Symbol = "DA",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3834)
+                            Symbol = "DA"
                         },
                         new
                         {
                             Id = new Guid("ff1bede6-ec71-2ab0-bbf8-7ff7e45ea08d"),
                             Code = "EGP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3852),
                             Decimals = 2,
                             Name = "Egyptian Pound",
-                            Symbol = "E£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3852)
+                            Symbol = "E£"
                         },
                         new
                         {
                             Id = new Guid("c38bddf4-a29d-6b76-7408-d47a540aae25"),
                             Code = "EHP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3869),
                             Decimals = 2,
                             Name = "Sahrawi Peseta",
-                            Symbol = "Ptas.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3870)
+                            Symbol = "Ptas."
                         },
                         new
                         {
                             Id = new Guid("b356e5fe-69d1-2ebd-a6fb-e8e71f0ade0a"),
                             Code = "ERN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3887),
                             Decimals = 2,
                             Name = "Eritrean Nakfa",
-                            Symbol = "Nkf",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3887)
+                            Symbol = "Nkf"
                         },
                         new
                         {
                             Id = new Guid("38a3c1b4-829b-a079-ee13-5fb1f8368255"),
                             Code = "ETB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3905),
                             Decimals = 2,
                             Name = "Ethiopian Birr",
-                            Symbol = "Br",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3905)
+                            Symbol = "Br"
                         },
                         new
                         {
                             Id = new Guid("2b5655a0-59db-8bad-a9cc-680367308118"),
                             Code = "EUR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3922),
                             Decimals = 2,
                             Name = "Euro",
-                            Symbol = "€",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3922)
+                            Symbol = "€"
                         },
                         new
                         {
                             Id = new Guid("68f951a8-ddb8-06a6-535c-03efee304638"),
                             Code = "FJD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3939),
                             Decimals = 2,
                             Name = "Fijian Dollar",
-                            Symbol = "FJ$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3940)
+                            Symbol = "FJ$"
                         },
                         new
                         {
                             Id = new Guid("9ec98535-c765-76fb-b3a0-76723dc90c5f"),
                             Code = "FKP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3957),
                             Decimals = 2,
                             Name = "Falkland Islands Pound",
-                            Symbol = "FK£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3957)
+                            Symbol = "FK£"
                         },
                         new
                         {
                             Id = new Guid("d6d95096-73d6-1255-28bb-1042f482459f"),
                             Code = "FOK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3975),
                             Decimals = 2,
                             Name = "Faroese Króna",
-                            Symbol = "kr",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3975)
+                            Symbol = "kr"
                         },
                         new
                         {
                             Id = new Guid("8522dd3a-4f09-31dc-8690-2810080c1465"),
                             Code = "GBP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3993),
                             Decimals = 2,
                             Name = "Pound Sterling",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(3994)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("19c11074-e05c-e42f-5957-2628e9510004"),
                             Code = "GEL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4011),
                             Decimals = 2,
                             Name = "Georgian Lari",
-                            Symbol = "₾",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4012)
+                            Symbol = "₾"
                         },
                         new
                         {
                             Id = new Guid("0c2207d4-a840-043c-a181-13629f23a763"),
                             Code = "GGP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4029),
                             Decimals = 2,
                             Name = "Guernsey Pound",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4030)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("2428a728-cc03-1770-c9e1-d5d3f5041bfd"),
                             Code = "GHS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4047),
                             Decimals = 2,
                             Name = "Ghanaian Cedi",
-                            Symbol = "GH₵",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4047)
+                            Symbol = "GH₵"
                         },
                         new
                         {
                             Id = new Guid("0a4231a1-7e53-1a6d-2523-079b0e28f991"),
                             Code = "GIP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4064),
                             Decimals = 2,
                             Name = "Gibraltar Pound",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4064)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("2b0ea592-0b3e-5ba4-28ab-150a385bafcc"),
                             Code = "GMD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4082),
                             Decimals = 2,
                             Name = "Gambian Dalasi",
-                            Symbol = "D",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4082)
+                            Symbol = "D"
                         },
                         new
                         {
                             Id = new Guid("926eca77-9f15-2b68-db43-52af6058eb92"),
                             Code = "GNF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4099),
                             Decimals = 2,
                             Name = "Guinean Franc",
-                            Symbol = "FG",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4099)
+                            Symbol = "FG"
                         },
                         new
                         {
                             Id = new Guid("67614275-c295-93eb-6397-1960a03be6d0"),
                             Code = "GTQ",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4117),
                             Decimals = 2,
                             Name = "Guatemalan Quetzal",
-                            Symbol = "Q",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4117)
+                            Symbol = "Q"
                         },
                         new
                         {
                             Id = new Guid("e185868b-8361-d093-0e8a-87328b75ddd6"),
                             Code = "GYD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4134),
                             Decimals = 2,
                             Name = "Guyanese Dollar",
-                            Symbol = "G$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4134)
+                            Symbol = "G$"
                         },
                         new
                         {
                             Id = new Guid("2a050d05-a326-9d10-0fb0-6176ee1db8e8"),
                             Code = "HKD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4152),
                             Decimals = 2,
                             Name = "Hong Kong Dollar",
-                            Symbol = "HK$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4152)
+                            Symbol = "HK$"
                         },
                         new
                         {
                             Id = new Guid("7441bca5-d568-c3c8-7867-2f6bdd2e0c90"),
                             Code = "HNL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4169),
                             Decimals = 2,
                             Name = "Honduran Lempira",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4170)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("bb221ac1-7c55-feae-8a0f-3535dbf6d201"),
                             Code = "HRK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4212),
                             Decimals = 2,
                             Name = "Croatian Kuna",
-                            Symbol = "kn",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4212)
+                            Symbol = "kn"
                         },
                         new
                         {
                             Id = new Guid("40554325-f171-792b-a96a-c865112a53e0"),
                             Code = "HTG",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4230),
                             Decimals = 2,
                             Name = "Haitian Gourde",
-                            Symbol = "G",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4231)
+                            Symbol = "G"
                         },
                         new
                         {
                             Id = new Guid("60c073b8-2a92-f667-4ac0-9d27d1232f3a"),
                             Code = "HUF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4248),
                             Decimals = 2,
                             Name = "Hungarian Forint",
-                            Symbol = "Ft",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4248)
+                            Symbol = "Ft"
                         },
                         new
                         {
                             Id = new Guid("1b522f66-c212-d240-c3c1-95f3df817b0c"),
                             Code = "IDR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4266),
                             Decimals = 2,
                             Name = "Indonesian Rupiah",
-                            Symbol = "Rp",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4266)
+                            Symbol = "Rp"
                         },
                         new
                         {
                             Id = new Guid("7eaaeee8-73e1-02b2-12e4-0babe414c5c0"),
                             Code = "ILS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4283),
                             Decimals = 2,
                             Name = "Israeli new Shekel",
-                            Symbol = "₪",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4283)
+                            Symbol = "₪"
                         },
                         new
                         {
                             Id = new Guid("9cc1be6e-a3f0-09a6-354a-05acde9ca8af"),
                             Code = "IMP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4302),
                             Decimals = 2,
                             Name = "Manx Pound",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4302)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("c8e8fa4f-bdc3-24a7-e6cc-853513870137"),
                             Code = "INR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4319),
                             Decimals = 2,
                             Name = "Indian Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4320)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("74b8c512-dd0b-9dc2-a376-7cf7aa684995"),
                             Code = "IQD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4337),
                             Decimals = 3,
                             Name = "Iraqi Dinar",
-                            Symbol = "د.ع.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4338)
+                            Symbol = "د.ع."
                         },
                         new
                         {
                             Id = new Guid("cf6aa1ea-10a1-b24c-23a5-5fb03fdde12f"),
                             Code = "IRR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4356),
                             Decimals = 2,
                             Name = "Iranian Rial",
-                            Symbol = "﷼",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4357)
+                            Symbol = "﷼"
                         },
                         new
                         {
                             Id = new Guid("b1507d3f-5e68-147b-f5bf-abf8b30c703a"),
                             Code = "ISK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4374),
                             Decimals = 2,
                             Name = "Icelandic Krona",
-                            Symbol = "kr",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4375)
+                            Symbol = "kr"
                         },
                         new
                         {
                             Id = new Guid("ae5c7dce-0da4-e7f9-59a2-c1e0ec747f69"),
                             Code = "JEP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4392),
                             Decimals = 2,
                             Name = "Jersey Pound",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4392)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("5e7281f1-c8b3-2546-bc1c-77fa4b39f47c"),
                             Code = "JMD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4410),
                             Decimals = 2,
                             Name = "Jamaican Dollar",
-                            Symbol = "J$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4410)
+                            Symbol = "J$"
                         },
                         new
                         {
                             Id = new Guid("1bd8d6bb-55fc-36c3-03ed-6378bc630669"),
                             Code = "JOD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4427),
                             Decimals = 3,
                             Name = "Jordanian Dinar",
-                            Symbol = "JD",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4428)
+                            Symbol = "JD"
                         },
                         new
                         {
                             Id = new Guid("5d29220d-29ba-8a8b-4831-a943545b0810"),
                             Code = "JPY",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4445),
                             Decimals = 2,
                             Name = "Japanese Yen",
-                            Symbol = "¥",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4445)
+                            Symbol = "¥"
                         },
                         new
                         {
                             Id = new Guid("4fde0da3-c7fc-d1ac-174a-05337056b552"),
                             Code = "KES",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4462),
                             Decimals = 2,
                             Name = "Kenyan Shilling",
-                            Symbol = "KSh",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4463)
+                            Symbol = "KSh"
                         },
                         new
                         {
                             Id = new Guid("48c67697-6737-dacd-e0a3-8b6149c08539"),
                             Code = "KGS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4480),
                             Decimals = 2,
                             Name = "Kyrgyzstani Som",
-                            Symbol = "с",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4480)
+                            Symbol = "с"
                         },
                         new
                         {
                             Id = new Guid("d261eb65-f310-f4ec-45f5-12103e765526"),
                             Code = "KHR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4497),
                             Decimals = 2,
                             Name = "Cambodian Riel",
-                            Symbol = "៛",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4498)
+                            Symbol = "៛"
                         },
                         new
                         {
                             Id = new Guid("5a6da5a4-7482-44d7-b1ab-9678d60901bf"),
                             Code = "KID",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4515),
                             Decimals = 2,
                             Name = "Kiribati Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4515)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("e87ef008-3803-cfd2-4fd6-5e7bc1909085"),
                             Code = "KMF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4532),
                             Decimals = 2,
                             Name = "Comorian Franc",
-                            Symbol = "CF",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4532)
+                            Symbol = "CF"
                         },
                         new
                         {
                             Id = new Guid("d0b6ec83-0781-82a9-b9f7-495d3c265446"),
                             Code = "KPW",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4573),
                             Decimals = 2,
                             Name = "North Korean Won",
-                            Symbol = "₩",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4574)
+                            Symbol = "₩"
                         },
                         new
                         {
                             Id = new Guid("a0093fc2-1d1b-f9d2-4308-1b0b6febaf99"),
                             Code = "KRW",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4591),
                             Decimals = 2,
                             Name = "South Korean Won",
-                            Symbol = "₩",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4591)
+                            Symbol = "₩"
                         },
                         new
                         {
                             Id = new Guid("297a1d27-54c7-bdea-6a11-0781a1adbd2d"),
                             Code = "KWD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4609),
                             Decimals = 3,
                             Name = "Kuwaiti Dinar",
-                            Symbol = "KD",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4609)
+                            Symbol = "KD"
                         },
                         new
                         {
                             Id = new Guid("a47b9428-0b75-c0ac-947b-e464145e08b0"),
                             Code = "KYD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4627),
                             Decimals = 2,
                             Name = "Cayman Islands Dollar",
-                            Symbol = "CI$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4627)
+                            Symbol = "CI$"
                         },
                         new
                         {
                             Id = new Guid("6cb14b53-b3e9-e872-099d-b6081da2f962"),
                             Code = "KZT",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4644),
                             Decimals = 2,
                             Name = "Kazakhstani Tenge",
-                            Symbol = "₸",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4645)
+                            Symbol = "₸"
                         },
                         new
                         {
                             Id = new Guid("2a574ebe-f04e-cd45-c914-49b6c9435a8a"),
                             Code = "LAK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4662),
                             Decimals = 2,
                             Name = "Lao Kip",
-                            Symbol = "₭N",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4662)
+                            Symbol = "₭N"
                         },
                         new
                         {
                             Id = new Guid("ee86f9f3-a4ad-f71a-77ef-5911d96c51ac"),
                             Code = "LBP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4681),
                             Decimals = 2,
                             Name = "Lebanese Pound",
-                            Symbol = "LL.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4681)
+                            Symbol = "LL."
                         },
                         new
                         {
                             Id = new Guid("47321ae7-6977-c8ba-d129-a02cd467e3e6"),
                             Code = "LKR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4698),
                             Decimals = 2,
                             Name = "Sri Lankan Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4699)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("e5bf28d5-c9f0-ba92-ffcc-8a7bef5cdcfb"),
                             Code = "LRD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4716),
                             Decimals = 2,
                             Name = "Liberian Dollar",
-                            Symbol = "L$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4716)
+                            Symbol = "L$"
                         },
                         new
                         {
                             Id = new Guid("eab80530-6fb9-df81-142d-787d501d0537"),
                             Code = "LSL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4733),
                             Decimals = 2,
                             Name = "Lesotho Loti",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4733)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("76e21711-52fc-c8e1-2ab6-7059d9ceca48"),
                             Code = "LYD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4750),
                             Decimals = 3,
                             Name = "Libyan Dinar",
-                            Symbol = "LD",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4751)
+                            Symbol = "LD"
                         },
                         new
                         {
                             Id = new Guid("820e7293-9d3d-f29a-3230-95152cb82906"),
                             Code = "MAD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4768),
                             Decimals = 2,
                             Name = "Moroccan Dirham",
-                            Symbol = "DH",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4768)
+                            Symbol = "DH"
                         },
                         new
                         {
                             Id = new Guid("a8318d34-a02f-20f4-fc0c-de4a1d0d845d"),
                             Code = "MDL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4785),
                             Decimals = 2,
                             Name = "Moldovan Leu",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4785)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("f293e3e4-f89a-c8aa-d614-354c3d5f3f4b"),
                             Code = "MGA",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4802),
                             Decimals = 0,
                             Name = "Malagasy Ariary",
-                            Symbol = "Ar",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4803)
+                            Symbol = "Ar"
                         },
                         new
                         {
                             Id = new Guid("02a94805-cd8a-6362-c147-e79e4f88cba9"),
                             Code = "MKD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4821),
                             Decimals = 2,
                             Name = "Macedonian Denar",
-                            Symbol = "den",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4821)
+                            Symbol = "den"
                         },
                         new
                         {
                             Id = new Guid("44c6af00-1d9b-9ff3-464e-a2ca3e56af77"),
                             Code = "MMK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4839),
                             Decimals = 2,
                             Name = "Myanmar Kyat",
-                            Symbol = "Ks",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4839)
+                            Symbol = "Ks"
                         },
                         new
                         {
                             Id = new Guid("4227f44f-52f9-693e-8b35-154f999f49a2"),
                             Code = "MNT",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4856),
                             Decimals = 2,
                             Name = "Mongolian Tögrög",
-                            Symbol = "₮",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4857)
+                            Symbol = "₮"
                         },
                         new
                         {
                             Id = new Guid("401229af-21e2-0ebb-94c2-f09ee87606cf"),
                             Code = "MOP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4876),
                             Decimals = 2,
                             Name = "Macanese Pataca",
-                            Symbol = "MOP$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4876)
+                            Symbol = "MOP$"
                         },
                         new
                         {
                             Id = new Guid("9954e1d1-d339-c1bd-caa1-0f65876dba6c"),
                             Code = "MRU",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4894),
                             Decimals = 0,
                             Name = "Mauritanian Ouguiya",
-                            Symbol = "UM",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4894)
+                            Symbol = "UM"
                         },
                         new
                         {
                             Id = new Guid("9f39b2f0-bfd4-d113-d6a8-e7bf52b27483"),
                             Code = "MUR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4912),
                             Decimals = 2,
                             Name = "Mauritian Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4913)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("5010968a-0037-6def-0d6c-1caf8f04ed9f"),
                             Code = "MVR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4930),
                             Decimals = 2,
                             Name = "Maldivian Rufiyaa",
-                            Symbol = "MRf",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4930)
+                            Symbol = "MRf"
                         },
                         new
                         {
                             Id = new Guid("86a6cb2d-72bf-6816-8c21-aaf78f409d11"),
                             Code = "MWK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4971),
                             Decimals = 2,
                             Name = "Malawian Kwacha",
-                            Symbol = "MK",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4971)
+                            Symbol = "MK"
                         },
                         new
                         {
                             Id = new Guid("c04f60fd-b0da-9def-793c-9598ae881435"),
                             Code = "MXN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4990),
                             Decimals = 2,
                             Name = "Mexican Peso",
-                            Symbol = "MX$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(4990)
+                            Symbol = "MX$"
                         },
                         new
                         {
                             Id = new Guid("8f676eb4-47c5-c84e-216c-5e3f4e9d327c"),
                             Code = "MYR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5007),
                             Decimals = 2,
                             Name = "Malaysian Ringgit",
-                            Symbol = "RM",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5008)
+                            Symbol = "RM"
                         },
                         new
                         {
                             Id = new Guid("9cd2c5bf-a278-f366-3479-d3fbad222d43"),
                             Code = "MZN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5025),
                             Decimals = 2,
                             Name = "Mozambican Metical",
-                            Symbol = "MTn",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5025)
+                            Symbol = "MTn"
                         },
                         new
                         {
                             Id = new Guid("5b568650-0456-1b07-2d45-d42afcb0d3e9"),
                             Code = "NAD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5043),
                             Decimals = 2,
                             Name = "Namibian Dollar",
-                            Symbol = "N$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5043)
+                            Symbol = "N$"
                         },
                         new
                         {
                             Id = new Guid("98884324-53da-bf34-fffc-8ac71ad2bb4e"),
                             Code = "NGN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5060),
                             Decimals = 2,
                             Name = "Nigerian Naira",
-                            Symbol = "₦",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5061)
+                            Symbol = "₦"
                         },
                         new
                         {
                             Id = new Guid("c0dfd9b6-54fb-7327-21ce-bc0fff55df2f"),
                             Code = "NIO",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5078),
                             Decimals = 2,
                             Name = "Nicaraguan Córdoba",
-                            Symbol = "C$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5078)
+                            Symbol = "C$"
                         },
                         new
                         {
                             Id = new Guid("22d1a99d-f0fd-1d1b-b281-6592e00f28ad"),
                             Code = "NOK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5096),
                             Decimals = 2,
                             Name = "Norwegian Krone",
-                            Symbol = "kr",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5097)
+                            Symbol = "kr"
                         },
                         new
                         {
                             Id = new Guid("1d521a8c-1e10-4db2-139d-c9ddfa30002f"),
                             Code = "NPR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5114),
                             Decimals = 2,
                             Name = "Nepalese Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5114)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("4e913f2e-5a32-a01c-cb82-a132af1002d3"),
                             Code = "NZD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5132),
                             Decimals = 2,
                             Name = "New Zealand Dollar",
-                            Symbol = "NZ$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5132)
+                            Symbol = "NZ$"
                         },
                         new
                         {
                             Id = new Guid("d41f5c78-f550-26b4-27e7-9c1890076425"),
                             Code = "OMR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5149),
                             Decimals = 3,
                             Name = "Omani Rial",
-                            Symbol = "OR",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5149)
+                            Symbol = "OR"
                         },
                         new
                         {
                             Id = new Guid("8375f4dc-9f02-d679-4904-cf78daa360cb"),
                             Code = "PAB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5166),
                             Decimals = 2,
                             Name = "Panamanian Balboa",
-                            Symbol = "B/.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5166)
+                            Symbol = "B/."
                         },
                         new
                         {
                             Id = new Guid("a41afad3-9f5b-6ee5-1fc1-b558d8ed6678"),
                             Code = "PEN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5183),
                             Decimals = 2,
                             Name = "Peruvian Sol",
-                            Symbol = "S/.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5184)
+                            Symbol = "S/."
                         },
                         new
                         {
                             Id = new Guid("15656902-67e6-5096-baae-b843d97cafd7"),
                             Code = "PGK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5201),
                             Decimals = 2,
                             Name = "Papua New Guinean Kina",
-                            Symbol = "K",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5201)
+                            Symbol = "K"
                         },
                         new
                         {
                             Id = new Guid("2339ec2f-a504-3ac2-c138-da22847f9b7c"),
                             Code = "PHP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5218),
                             Decimals = 2,
                             Name = "Philippine Peso",
-                            Symbol = "₱",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5219)
+                            Symbol = "₱"
                         },
                         new
                         {
                             Id = new Guid("cbb16792-48c6-0e0d-a037-217688b3a655"),
                             Code = "PKR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5236),
                             Decimals = 2,
                             Name = "Pakistani Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5237)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("ea876644-b12d-a7ad-5be5-ed053be77f59"),
                             Code = "PLN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5253),
                             Decimals = 2,
                             Name = "Polish Zloty",
-                            Symbol = "zł",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5254)
+                            Symbol = "zł"
                         },
                         new
                         {
                             Id = new Guid("d0319b6f-b5ec-f704-dcc8-690d7c7840e1"),
                             Code = "PND",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5271),
                             Decimals = 2,
                             Name = "Pitcairn Islands Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5272)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("3e768d90-f1cf-0469-58ba-5863ae3b894f"),
                             Code = "PRB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5289),
                             Decimals = 2,
                             Name = "Transnistrian Ruble",
-                            Symbol = "р.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5289)
+                            Symbol = "р."
                         },
                         new
                         {
                             Id = new Guid("d8eed51b-a077-453f-eeb9-e0d518e4834a"),
                             Code = "PYG",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5308),
                             Decimals = 2,
                             Name = "Paraguayan Guaraní",
-                            Symbol = "₲",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5308)
+                            Symbol = "₲"
                         },
                         new
                         {
                             Id = new Guid("bf3ae3b9-0846-74c4-1652-596350ea9718"),
                             Code = "QAR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5326),
                             Decimals = 2,
                             Name = "Qatari Riyal",
-                            Symbol = "QR",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5326)
+                            Symbol = "QR"
                         },
                         new
                         {
                             Id = new Guid("285dfed9-f150-16ed-7451-b193e8bd0e0c"),
                             Code = "RON",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5344),
                             Decimals = 2,
                             Name = "Romanian Leu",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5344)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("9ce1bd44-0ebc-0b83-caf0-54b5413dd39d"),
                             Code = "RSD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5386),
                             Decimals = 2,
                             Name = "Serbian Dinar",
-                            Symbol = "din",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5386)
+                            Symbol = "din"
                         },
                         new
                         {
                             Id = new Guid("43476567-32cc-eedf-bf2d-2d154db69cd8"),
                             Code = "RUB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5403),
                             Decimals = 2,
                             Name = "Russian Ruble",
-                            Symbol = "₽",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5403)
+                            Symbol = "₽"
                         },
                         new
                         {
                             Id = new Guid("eb4e9cc2-372e-d597-e676-21f51f3aecc1"),
                             Code = "RWF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5421),
                             Decimals = 2,
                             Name = "Rwandan Franc",
-                            Symbol = "FRw",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5421)
+                            Symbol = "FRw"
                         },
                         new
                         {
                             Id = new Guid("1fdc9b26-aab1-c5dc-b575-a68220158602"),
                             Code = "SAR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5438),
                             Decimals = 2,
                             Name = "Saudi Riyal",
-                            Symbol = "SR",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5438)
+                            Symbol = "SR"
                         },
                         new
                         {
                             Id = new Guid("7e312460-dd5b-62df-aa29-5395cbde54ab"),
                             Code = "SBD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5456),
                             Decimals = 2,
                             Name = "Solomon Islands Dollar",
-                            Symbol = "SI$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5456)
+                            Symbol = "SI$"
                         },
                         new
                         {
                             Id = new Guid("d59cc2b9-3cf8-5b53-0bca-f31343315bad"),
                             Code = "SCR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5474),
                             Decimals = 2,
                             Name = "Seychellois Rupee",
-                            Symbol = "Rs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5474)
+                            Symbol = "Rs."
                         },
                         new
                         {
                             Id = new Guid("744e6169-b041-9b1c-a6d4-974080d6d099"),
                             Code = "SDG",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5491),
                             Decimals = 2,
                             Name = "Sudanese Pound",
-                            Symbol = "£SD",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5491)
+                            Symbol = "£SD"
                         },
                         new
                         {
                             Id = new Guid("4e6b6ab8-67b2-a95a-8b7a-63b568434502"),
                             Code = "SEK",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5511),
                             Decimals = 2,
                             Name = "Swedish Krona",
-                            Symbol = "kr",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5511)
+                            Symbol = "kr"
                         },
                         new
                         {
                             Id = new Guid("5ff7ec50-7710-d2e1-50a7-81764b89cbc2"),
                             Code = "SGD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5528),
                             Decimals = 2,
                             Name = "Singapore Dollar",
-                            Symbol = "S$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5528)
+                            Symbol = "S$"
                         },
                         new
                         {
                             Id = new Guid("a10a44f7-44ba-740f-555d-4c313c9b7677"),
                             Code = "SHP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5620),
                             Decimals = 2,
                             Name = "Saint Helena Pound",
-                            Symbol = "£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5620)
+                            Symbol = "£"
                         },
                         new
                         {
                             Id = new Guid("bdcf2eae-d495-dd75-f088-76080d57e3d9"),
                             Code = "SLL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5638),
                             Decimals = 2,
                             Name = "Sierra Leonean Leone",
-                            Symbol = "Le",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5639)
+                            Symbol = "Le"
                         },
                         new
                         {
                             Id = new Guid("50c1f0d5-899f-17ff-8497-1832af4e7670"),
                             Code = "SLS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5656),
                             Decimals = 2,
                             Name = "Somaliland Shilling",
-                            Symbol = "Sl",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5656)
+                            Symbol = "Sl"
                         },
                         new
                         {
                             Id = new Guid("ede1d560-b630-558d-e6a1-8004b2d17ad2"),
                             Code = "SOS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5674),
                             Decimals = 2,
                             Name = "Somali Shilling",
-                            Symbol = "Sh.So.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5674)
+                            Symbol = "Sh.So."
                         },
                         new
                         {
                             Id = new Guid("ed4e06a4-e091-a871-d451-e0d09b480f78"),
                             Code = "SRD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5692),
                             Decimals = 2,
                             Name = "Surinamese Dollar",
-                            Symbol = "Sr$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5692)
+                            Symbol = "Sr$"
                         },
                         new
                         {
                             Id = new Guid("55dcd9ca-ba10-12f0-abf9-02dfa6bd3ad0"),
                             Code = "SSP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5709),
                             Decimals = 2,
                             Name = "South Sudanese Pound",
-                            Symbol = "SS£",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5709)
+                            Symbol = "SS£"
                         },
                         new
                         {
                             Id = new Guid("6988531f-2c0f-c510-a68a-c0b28696fd8b"),
                             Code = "STN",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5727),
                             Decimals = 2,
                             Name = "Sao Tome and Príncipe Dobra",
-                            Symbol = "Db",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5727)
+                            Symbol = "Db"
                         },
                         new
                         {
                             Id = new Guid("ac3f818d-37c4-8127-2b29-79fc265e4cad"),
                             Code = "SVC",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5774),
                             Decimals = 2,
                             Name = "Salvadoran Colón",
-                            Symbol = "₡",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5774)
+                            Symbol = "₡"
                         },
                         new
                         {
                             Id = new Guid("0dd3fce2-1222-e0e6-a029-704038803f37"),
                             Code = "SYP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5792),
                             Decimals = 2,
                             Name = "Syrian Pound",
-                            Symbol = "LS",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5792)
+                            Symbol = "LS"
                         },
                         new
                         {
                             Id = new Guid("e3366b73-b522-3659-97b4-927d6d9132ab"),
                             Code = "SZL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5809),
                             Decimals = 2,
                             Name = "Swazi Lilangeni",
-                            Symbol = "L",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5809)
+                            Symbol = "L"
                         },
                         new
                         {
                             Id = new Guid("b9f73528-6807-e1ac-225a-7821f5bcd131"),
                             Code = "THB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5827),
                             Decimals = 2,
                             Name = "Thai Baht",
-                            Symbol = "฿",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5827)
+                            Symbol = "฿"
                         },
                         new
                         {
                             Id = new Guid("b439a2fe-d174-b9a0-0401-6873d4f1ee24"),
                             Code = "TJS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5845),
                             Decimals = 2,
                             Name = "Tajikistani Somoni",
-                            Symbol = "SM",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5845)
+                            Symbol = "SM"
                         },
                         new
                         {
                             Id = new Guid("362ac415-3d05-4f89-ef1a-225ce99a3a2b"),
                             Code = "TMT",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5862),
                             Decimals = 2,
                             Name = "Turkmenistan Manat",
-                            Symbol = "m.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5862)
+                            Symbol = "m."
                         },
                         new
                         {
                             Id = new Guid("6a767c32-79c8-096b-f63d-a407c9c8967b"),
                             Code = "TND",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5879),
                             Decimals = 3,
                             Name = "Tunisian Dinar",
-                            Symbol = "DT",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5880)
+                            Symbol = "DT"
                         },
                         new
                         {
                             Id = new Guid("7b770567-2e71-11e8-e76f-b07162081d63"),
                             Code = "TOP",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5897),
                             Decimals = 2,
                             Name = "Tongan Paʻanga",
-                            Symbol = "T$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5897)
+                            Symbol = "T$"
                         },
                         new
                         {
                             Id = new Guid("3fb8df59-ac7c-3c4e-8ee9-1700ef2ad90d"),
                             Code = "TRY",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5915),
                             Decimals = 2,
                             Name = "Turkish Lira",
-                            Symbol = "TL",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5915)
+                            Symbol = "TL"
                         },
                         new
                         {
                             Id = new Guid("0d956a48-d79a-dea3-d9f6-fe8a13803a97"),
                             Code = "TTD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5932),
                             Decimals = 2,
                             Name = "Trinidad and Tobago Dollar",
-                            Symbol = "TT$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5933)
+                            Symbol = "TT$"
                         },
                         new
                         {
                             Id = new Guid("a97206d9-bbf4-6a2b-a4dc-96ed2b419af0"),
                             Code = "TVD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5950),
                             Decimals = 2,
                             Name = "Tuvaluan Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5950)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("770c05bb-8592-2f63-0e53-2eab4d629b1c"),
                             Code = "TWD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5968),
                             Decimals = 2,
                             Name = "New Taiwan Dollar",
-                            Symbol = "NT$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5968)
+                            Symbol = "NT$"
                         },
                         new
                         {
                             Id = new Guid("030483f1-a13c-1859-73b9-752835a31c07"),
                             Code = "TZS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5985),
                             Decimals = 2,
                             Name = "Tanzanian Shilling",
-                            Symbol = "TSh",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(5985)
+                            Symbol = "TSh"
                         },
                         new
                         {
                             Id = new Guid("39bdf548-263b-b98c-f43a-86af1a4d9e8c"),
                             Code = "UAH",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6002),
                             Decimals = 2,
                             Name = "Ukrainian Hryvnia",
-                            Symbol = "₴",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6002)
+                            Symbol = "₴"
                         },
                         new
                         {
                             Id = new Guid("fdaa9392-8e6e-d492-bb85-e72de96fd369"),
                             Code = "UGX",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6020),
                             Decimals = 2,
                             Name = "Ugandan Shilling",
-                            Symbol = "USh",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6020)
+                            Symbol = "USh"
                         },
                         new
                         {
                             Id = new Guid("94f81835-424d-2d21-d37d-affe097d216e"),
                             Code = "USD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6037),
                             Decimals = 2,
                             Name = "United States Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6037)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("1289187c-d210-cdae-27ae-a1e09562a989"),
                             Code = "UYU",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6054),
                             Decimals = 2,
                             Name = "Uruguayan Peso",
-                            Symbol = "$U",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6055)
+                            Symbol = "$U"
                         },
                         new
                         {
                             Id = new Guid("affb8a7b-6a90-9670-01db-6e066a527dd1"),
                             Code = "UZS",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6072),
                             Decimals = 2,
                             Name = "Uzbekistani Som",
-                            Symbol = "сум",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6072)
+                            Symbol = "сум"
                         },
                         new
                         {
                             Id = new Guid("6e156d15-a487-437a-5879-313a5ef39da4"),
                             Code = "VED",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6090),
                             Decimals = 2,
                             Name = "Venezuelan bolívar digital",
-                            Symbol = "Bs.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6090)
+                            Symbol = "Bs."
                         },
                         new
                         {
                             Id = new Guid("a8afda91-e019-0ea0-fed5-b683ec81b9b2"),
                             Code = "VES",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6108),
                             Decimals = 2,
                             Name = "Venezuelan Bolívar Soberano",
-                            Symbol = "Bs.F",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6108)
+                            Symbol = "Bs.F"
                         },
                         new
                         {
                             Id = new Guid("ce256ef1-ecc4-b3ca-e643-a66a8eccb1cb"),
                             Code = "VND",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6126),
                             Decimals = 2,
                             Name = "Vietnamese Dong",
-                            Symbol = "₫",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6126)
+                            Symbol = "₫"
                         },
                         new
                         {
                             Id = new Guid("5423cf5d-7420-563b-3642-2f69a2f7822c"),
                             Code = "VUV",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6159),
                             Decimals = 0,
                             Name = "Vanuatu Vatu",
-                            Symbol = "VT",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6159)
+                            Symbol = "VT"
                         },
                         new
                         {
                             Id = new Guid("53203a98-f729-bc7e-1712-be17806b8b0a"),
                             Code = "WST",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6177),
                             Decimals = 2,
                             Name = "Samoan Tala",
-                            Symbol = "T",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6177)
+                            Symbol = "T"
                         },
                         new
                         {
                             Id = new Guid("9ecde9a9-ad81-da58-5b9a-608f70e1d7d9"),
                             Code = "XAF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6194),
                             Decimals = 2,
                             Name = "Central African CFA Franc BEAC",
-                            Symbol = "Fr",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6195)
+                            Symbol = "Fr"
                         },
                         new
                         {
                             Id = new Guid("cfda8d44-5193-1202-7e2c-6374c945725d"),
                             Code = "XCD",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6212),
                             Decimals = 2,
                             Name = "East Caribbean Dollar",
-                            Symbol = "$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6213)
+                            Symbol = "$"
                         },
                         new
                         {
                             Id = new Guid("fd4cad0d-8381-fc1c-78ca-2aca02283588"),
                             Code = "XOF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6230),
                             Decimals = 2,
                             Name = "West African CFA Franc BCEAO",
-                            Symbol = "₣",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6230)
+                            Symbol = "₣"
                         },
                         new
                         {
                             Id = new Guid("1c7010ea-6905-a818-1dc8-9906b9019c35"),
                             Code = "XPF",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6248),
                             Decimals = 0,
                             Name = "CFP Franc (Franc Pacifique)",
-                            Symbol = "₣",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6248)
+                            Symbol = "₣"
                         },
                         new
                         {
                             Id = new Guid("36a1cc65-7ef9-f628-ea8c-af95ba0be3d6"),
                             Code = "YER",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6265),
                             Decimals = 2,
                             Name = "Yemeni Rial",
-                            Symbol = "YR",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6265)
+                            Symbol = "YR"
                         },
                         new
                         {
                             Id = new Guid("a03a80ff-17c5-da03-a2da-b2119613aa6f"),
                             Code = "ZAR",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6283),
                             Decimals = 2,
                             Name = "South African Rand",
-                            Symbol = "R",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6283)
+                            Symbol = "R"
                         },
                         new
                         {
                             Id = new Guid("15127fd9-5505-772c-09f4-a998ebe7d84e"),
                             Code = "ZMW",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6300),
                             Decimals = 2,
                             Name = "Zambian Kwacha",
-                            Symbol = "ZK",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6300)
+                            Symbol = "ZK"
                         },
                         new
                         {
                             Id = new Guid("a5da4d34-06e9-0e91-af8b-8df4656a8551"),
                             Code = "ZWB",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6317),
                             Decimals = 0,
                             Name = "RTGS Dollar",
-                            Symbol = "",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6318)
+                            Symbol = ""
                         },
                         new
                         {
                             Id = new Guid("6f821189-ba30-9c98-56aa-38112064db7d"),
                             Code = "ZWL",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6336),
                             Decimals = 2,
                             Name = "Zimbabwean Dollar",
-                            Symbol = "Z$",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6337)
+                            Symbol = "Z$"
                         },
                         new
                         {
                             Id = new Guid("f0f39460-5873-4369-5cdb-49c60235bffe"),
                             Code = "Abkhazia",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6354),
                             Decimals = 0,
                             Name = "Abkhazian Apsar",
-                            Symbol = "",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6355)
+                            Symbol = ""
                         },
                         new
                         {
                             Id = new Guid("fb14d36d-e4ae-ce2a-0874-5f9bbaf3da54"),
                             Code = "Artsakh",
-                            CreatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6372),
                             Decimals = 2,
                             Name = "Artsakh Dram",
-                            Symbol = "դր.",
-                            UpdatedAt = new DateTime(2025, 2, 4, 23, 32, 45, 16, DateTimeKind.Utc).AddTicks(6373)
+                            Symbol = "դր."
                         });
                 });
 
