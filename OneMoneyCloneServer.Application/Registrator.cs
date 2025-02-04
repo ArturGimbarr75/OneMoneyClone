@@ -11,5 +11,6 @@ public static class Registrator
 	{
 		services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 		services.AddScoped<IPasswordHashingService, PasswordHashingService>();
+		services.AddScoped<IUserService, UserService>();
 	}
 }
