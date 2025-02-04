@@ -18,9 +18,9 @@ public class UserService : IUserService
 	private readonly UserManager<User> _userManager;
 	private readonly IPasswordHashingService _passwordHasher;
 	private readonly IConfiguration _configuration;
-	private readonly ILogger _logger;
+	private readonly ILogger<UserService> _logger;
 
-	public UserService(UserManager<User> userManager, IPasswordHashingService passwordHasher, IConfiguration configuration, ILogger logger)
+	public UserService(UserManager<User> userManager, IPasswordHashingService passwordHasher, IConfiguration configuration, ILogger<UserService> logger)
 	{
 		_userManager = userManager;
 		_passwordHasher = passwordHasher;
