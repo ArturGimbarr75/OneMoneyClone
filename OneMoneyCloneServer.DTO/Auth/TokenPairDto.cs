@@ -1,7 +1,7 @@
 ﻿namespace OneMoneyCloneServer.DTO.Auth;
 
-public class RefreshTokenDto
+public class TokenPairDto
 {
 	public string Token { get; set; } = string.Empty;
-	public DateTime Expires { get; set; }
+	public RefreshTokenDto RefreshToken { get; set; } = default!;
 }
