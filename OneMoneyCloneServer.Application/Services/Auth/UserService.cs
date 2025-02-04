@@ -75,6 +75,8 @@ public class UserService : IUserService
 
 	private AuthResponseDto GenerateAuthResponse(User user)
 	{
+		// TODO: Move this to a separate service?
+		// TODO: Use  "Issuer" and "Audience"
 		var tokenHandler = new JwtSecurityTokenHandler();
 		var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!);
 		var claims = new[]
@@ -83,10 +85,15 @@ public class UserService : IUserService
 			new Claim(ClaimTypes.Email, user.Email!)
 		};
 
+		// TODO: Fix get methods
+		var accessTokenExpiration = int.Parse(_configuration["Jwt:AccessTokenExpiration"]!);
+		var refreshTokenExpiration = int.Parse(_configuration["Jwt:RefreshTokenExpiration"]!);
+		;
+
 		var tokenDescriptor = new SecurityTokenDescriptor()
 		{
 			Subject = new ClaimsIdentity(claims),
-			Expires = DateTime.UtcNow.AddHours(1),
+			Expires = DateTime.UtcNow.AddSeconds(accessTokenExpiration),
 			SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
 		};
 
@@ -95,9 +102,13 @@ public class UserService : IUserService
 
 		return new AuthResponseDto
 		{
-			Token = tokenHandler.WriteToken(token),
-			RefreshToken = refreshToken,
-			User = new UserDto()
+			AccessToken = tokenHandler.WriteToken(token),
+			RefreshToken = new ()
+			{
+				Token = refreshToken,
+				Expires = DateTime.UtcNow.AddSeconds(refreshTokenExpiration)
+			},
+			User = new ()
 			{
 				Id = user.Id,
 				Email = user.Email!,
