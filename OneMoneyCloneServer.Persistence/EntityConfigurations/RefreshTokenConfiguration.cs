@@ -17,5 +17,7 @@ internal class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken
 
 		builder.Property(rt => rt.Token).IsRequired();
 		builder.Property(rt => rt.Expires).IsRequired();
+		builder.Property(rt => rt.IsUsed).IsRequired();
+		builder.Property(rt => rt.IsRevoked).IsRequired();
 	}
 }
