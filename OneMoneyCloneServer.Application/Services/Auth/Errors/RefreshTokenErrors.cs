@@ -2,7 +2,11 @@
 
 public enum RefreshTokenErrors
 {
+	ExpiredToken,
+	InvalidRefreshToken,
 	InvalidToken,
 	InternalError,
-	Other
+	RefreshTokenRevoked,
+	RefreshTokenUsed,
+	UserNotFound
 }

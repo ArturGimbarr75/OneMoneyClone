@@ -6,6 +6,7 @@ using OneMoneyCloneServer.Application.Infrastructure;
 using OneMoneyCloneServer.Application.Services.Auth.Errors;
 using OneMoneyCloneServer.DTO.Auth;
 using OneMoneyCloneServer.Models.Server;
+using OneMoneyCloneServer.Repositories.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -17,15 +18,21 @@ public class UserService : IUserService
 {
 	private readonly UserManager<User> _userManager;
 	private readonly IPasswordHashingService _passwordHasher;
+	private readonly IRefreshTokenRepository _refreshTokenRepository;
 	private readonly IConfiguration _configuration;
 	private readonly ILogger<UserService> _logger;
 
-	public UserService(UserManager<User> userManager, IPasswordHashingService passwordHasher, IConfiguration configuration, ILogger<UserService> logger)
+	public UserService(	UserManager<User> userManager,
+						IPasswordHashingService passwordHasher,
+						IConfiguration configuration,
+						ILogger<UserService> logger,
+						IRefreshTokenRepository refreshTokenRepository)
 	{
 		_userManager = userManager;
 		_passwordHasher = passwordHasher;
 		_configuration = configuration;
 		_logger = logger;
+		_refreshTokenRepository = refreshTokenRepository;
 	}
 
 	public async Task<InfoResult<AuthResponseDto, LoginErrors>> LoginAsync(LoginDto model)
@@ -52,25 +59,55 @@ public class UserService : IUserService
 		}
 		catch (Exception ex)
 		{
-			return InfoResult<AuthResponseDto, LoginErrors>.WithInfo(LoginErrors.Other, ex.Message);
+			return InfoResult<AuthResponseDto, LoginErrors>.WithInfo(LoginErrors.InternalError, ex.Message);
 		}
 	}
 
-	public Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(string refreshToken)
+	public async Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(StringTokenPairDto tokenPair)
 	{
-		throw new NotImplementedException();
+		try
+		{
+			Guid userId = ExtractUserIdFromJwt(tokenPair.Token);
+
+			if (userId == Guid.Empty)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.InvalidToken, "Invalid token");
+
+			var user = await _userManager.FindByIdAsync(userId.ToString());
+
+			if (user is null)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.UserNotFound, "User not found");
+
+			RefreshToken? refreshToken = await _refreshTokenRepository.GetRefreshTokenByTokenAsync(tokenPair.RefreshToken);
+
+			if (refreshToken is null)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.InvalidRefreshToken, "Invalid refresh token");
+
+			if (refreshToken.UserId != userId)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.InvalidRefreshToken, "Invalid refresh token");
+
+			if (refreshToken.IsUsed)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.RefreshTokenUsed);
+
+			if (refreshToken.IsRevoked)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.RefreshTokenRevoked);
+
+			if (refreshToken.Expires < DateTime.UtcNow)
+				return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.ExpiredToken, "Token expired");
+
+			refreshToken.IsUsed = true;
+			await _refreshTokenRepository.UpdateRefreshTokenAsync(refreshToken);
+
+			return GenerateAuthResponse(user);
+		}
+		catch (Exception ex)
+		{
+			return InfoResult<AuthResponseDto, RefreshTokenErrors>.WithInfo(RefreshTokenErrors.InternalError, ex.Message);
+		}
 	}
 
 	public Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model)
 	{
 		throw new NotImplementedException();
-		/*var user = new User { Email = model.Email, UserName = model.Email, MainCurrencyId = model.MainCurrencyId };
-		var result = await _userManager.CreateAsync(user, model.Password);
-
-		if (!result.Succeeded)
-			throw new Exception(string.Join(", ", result.Errors.Select(e => e.Description)));
-
-		return GenerateAuthResponse(user);*/
 	}
 
 	private AuthResponseDto GenerateAuthResponse(User user)
@@ -115,5 +152,22 @@ public class UserService : IUserService
 				CreatedAt = user.CreatedAt
 			}
 		};
+	}
+
+	private Guid ExtractUserIdFromJwt(string token)
+	{
+		var handler = new JwtSecurityTokenHandler();
+
+		try
+		{
+			var jwtToken = handler.ReadJwtToken(token);
+			var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+
+			return userIdClaim != null ? Guid.Parse(userIdClaim.Value) : Guid.Empty;
+		}
+		catch (Exception)
+		{
+			return Guid.Empty;
+		}
 	}
 }

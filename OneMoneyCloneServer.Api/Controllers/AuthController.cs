@@ -48,9 +48,9 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[HttpPost("refresh")]
 		[ProducesResponseType(typeof(AuthResponseDto), StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public async Task<ActionResult<AuthResponseDto>> Refresh([FromBody] string refreshToken)
+		public async Task<ActionResult<AuthResponseDto>> Refresh([FromBody] StringTokenPairDto tokenPair)
 		{
-			var result = await _userService.RefreshTokenAsync(refreshToken);
+			var result = await _userService.RefreshTokenAsync(tokenPair);
 
 			if (result)
 				return Ok(result.Value);

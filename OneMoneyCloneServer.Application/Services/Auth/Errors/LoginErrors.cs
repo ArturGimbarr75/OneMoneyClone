@@ -3,6 +3,5 @@
 public enum LoginErrors
 {
 	InvalidCredentials,
-	InternalError,
-	Other
+	InternalError
 }
