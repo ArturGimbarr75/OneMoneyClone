@@ -8,6 +8,6 @@ public static class Registrator
 {
 	public static void AddRepositories(this IServiceCollection services)
 	{
-		services.AddScoped<IUserRepository, UserRepository>();
+		
 	}
 }
