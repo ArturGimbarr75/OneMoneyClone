@@ -20,6 +20,7 @@ public class UserService : IUserService
 	private readonly IPasswordHashingService _passwordHasher;
 	private readonly IRefreshTokenRepository _refreshTokenRepository;
 	private readonly IConfiguration _configuration;
+	// TODO: Use Logger
 	private readonly ILogger<UserService> _logger;
 
 	public UserService(	UserManager<User> userManager,
