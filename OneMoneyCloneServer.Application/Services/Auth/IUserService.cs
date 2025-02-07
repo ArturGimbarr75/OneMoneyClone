@@ -7,7 +7,7 @@ namespace OneMoneyCloneServer.Application.Services.Auth;
 
 public interface IUserService
 {
-	Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model);
+	Task<InfoResult<UserDto, RegisterErrors>> RegisterAsync(RegisterDto model);
 	Task<InfoResult<AuthResponseDto, LoginErrors>> LoginAsync(LoginDto model);
 	Task<InfoResult<AuthResponseDto, RefreshTokenErrors>> RefreshTokenAsync(StringTokenPairDto tokenPair);
 }

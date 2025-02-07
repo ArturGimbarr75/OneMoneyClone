@@ -17,22 +17,25 @@ namespace OneMoneyCloneServer.Application.Services.Auth;
 public class UserService : IUserService
 {
 	private readonly UserManager<User> _userManager;
-	private readonly IPasswordHashingService _passwordHasher;
-	private readonly IRefreshTokenRepository _refreshTokenRepository;
 	private readonly IConfiguration _configuration;
+	private readonly ICurrencyRepository _currencyRepository;
 	// TODO: Use Logger
 	private readonly ILogger<UserService> _logger;
+	private readonly IPasswordHashingService _passwordHasher;
+	private readonly IRefreshTokenRepository _refreshTokenRepository;
 
 	public UserService(	UserManager<User> userManager,
-						IPasswordHashingService passwordHasher,
 						IConfiguration configuration,
+						ICurrencyRepository currencyRepository,
 						ILogger<UserService> logger,
+						IPasswordHashingService passwordHasher,
 						IRefreshTokenRepository refreshTokenRepository)
 	{
 		_userManager = userManager;
-		_passwordHasher = passwordHasher;
 		_configuration = configuration;
+		_currencyRepository = currencyRepository;
 		_logger = logger;
+		_passwordHasher = passwordHasher;
 		_refreshTokenRepository = refreshTokenRepository;
 	}
 
@@ -60,12 +63,16 @@ public class UserService : IUserService
 				return LoginErrors.InvalidCredentials;
 
 			var authResponse = GenerateAuthResponse(user);
-			await _refreshTokenRepository.CreateRefreshTokenAsync(new RefreshToken
+			RefreshToken rt = new()
 			{
 				Token = authResponse.RefreshToken.Token,
 				UserId = user.Id,
 				Expires = authResponse.RefreshToken.Expires
-			});
+			};
+			var savedRt = await _refreshTokenRepository.CreateRefreshTokenAsync(rt);
+
+			if (savedRt is null)
+				return InfoResult<AuthResponseDto, LoginErrors>.WithInfo(LoginErrors.InternalError, "Internal error, contact support");
 
 			return authResponse;
 		}
@@ -117,9 +124,41 @@ public class UserService : IUserService
 		}
 	}
 
-	public Task<InfoResult<AuthResponseDto, RegisterErrors>> RegisterAsync(RegisterDto model)
+	public async Task<InfoResult<UserDto, RegisterErrors>> RegisterAsync(RegisterDto model)
 	{
-		throw new NotImplementedException();
+		if (model == null)
+			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InvalidData, "Invalid model");
+
+		if (string.IsNullOrWhiteSpace(model.Email) || string.IsNullOrWhiteSpace(model.Password))
+			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InvalidData, "Email or password empty");
+
+		var existingUser = await _userManager.FindByEmailAsync(model.Email);
+		if (existingUser != null)
+			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.EmailAlreadyExists, "Email already exists");
+
+		if (!await _currencyRepository.IsCurrencyExists(model.MainCurrencyId))
+			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InvalidCurrency, "Currency not found");
+
+		var user = new User
+		{
+			Email = model.Email,
+			UserName = model.Email,
+			MainCurrencyId = model.MainCurrencyId
+		};
+
+		var creationResult = await _userManager.CreateAsync(user, model.Password);
+		if (!creationResult.Succeeded)
+			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InternalError, string.Join(", ", creationResult.Errors.Select(e => e.Description)));
+
+		var userDto = new UserDto
+		{
+			Id = user.Id,
+			Email = user.Email!,
+			MainCurrencyId = user.MainCurrencyId,
+			CreatedAt = user.CreatedAt
+		};
+
+		return userDto;
 	}
 
 	private AuthResponseDto GenerateAuthResponse(User user)

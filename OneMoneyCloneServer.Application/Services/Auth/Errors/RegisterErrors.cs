@@ -5,5 +5,6 @@ public enum RegisterErrors
 	EmailAlreadyExists,
 	InternalError,
 	InvalidCurrency,
+	InvalidData,
 	PasswordNotStrong
 }
