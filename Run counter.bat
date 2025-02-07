@@ -1,0 +1,2 @@
+python CodeCounter.py
+pause
