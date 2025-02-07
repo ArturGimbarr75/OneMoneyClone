@@ -13,7 +13,9 @@ internal class RefreshTokenConfiguration : IEntityTypeConfiguration<RefreshToken
 
 		builder.HasOne(rt => rt.User)
 			.WithMany(u => u.RefreshTokens)
-			.HasForeignKey(rt => rt.UserId);
+			.HasForeignKey(rt => rt.UserId)
+			.IsRequired()
+			.OnDelete(DeleteBehavior.Cascade);
 
 		builder.Property(rt => rt.Token).IsRequired();
 		builder.Property(rt => rt.Expires).IsRequired();
