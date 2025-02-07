@@ -8,6 +8,7 @@ public static class Registrator
 {
 	public static void AddRepositories(this IServiceCollection services)
 	{
+		services.AddScoped<ICurrencyRepository, CurrencyRepository>();
 		services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
 	}
 }
