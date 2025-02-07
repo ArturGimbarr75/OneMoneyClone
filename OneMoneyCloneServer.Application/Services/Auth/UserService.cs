@@ -55,7 +55,18 @@ public class UserService : IUserService
 
 			var result = _passwordHasher.VerifyPassword(user, user.PasswordHash, model.Password);
 
-			return GenerateAuthResponse(user);
+			if (result != PasswordVerificationResult.Success)
+				return LoginErrors.InvalidCredentials;
+
+			var authResponse = GenerateAuthResponse(user);
+			await _refreshTokenRepository.CreateRefreshTokenAsync(new RefreshToken
+			{
+				Token = authResponse.RefreshToken.Token,
+				UserId = user.Id,
+				Expires = authResponse.RefreshToken.Expires
+			});
+
+			return authResponse;
 		}
 		catch (Exception ex)
 		{
