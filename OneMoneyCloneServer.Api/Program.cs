@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using OneMoneyCloneServer.Api;
 using OneMoneyCloneServer.Application;
 using OneMoneyCloneServer.Persistence;
@@ -23,5 +24,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
+
+using (var scope = app.Services.CreateScope())
+{
+	var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+	await db.Database.MigrateAsync();
+}
 
 app.Run();

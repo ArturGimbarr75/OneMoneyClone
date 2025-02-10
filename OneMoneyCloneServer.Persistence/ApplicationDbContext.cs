@@ -27,9 +27,4 @@ public sealed class ApplicationDbContext : IdentityDbContext<User, IdentityRole<
 		base.OnModelCreating(modelBuilder);
 		modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
 	}
-
-	public Task EnsureDatabaseCreatedAsync()
-	{
-		return Database.MigrateAsync();
-	}
 }
