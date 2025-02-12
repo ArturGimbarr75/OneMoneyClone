@@ -161,6 +161,50 @@ public class UserService : IUserService
 		return userDto;
 	}
 
+	public async Task<InfoResult<bool, LogoutErrors>> LogoutAsync(StringTokenPairDto tokenPair)
+	{
+		if (tokenPair is null)
+			return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidModel, "Model is null");
+
+		if (string.IsNullOrWhiteSpace(tokenPair.Token) || string.IsNullOrWhiteSpace(tokenPair.RefreshToken))
+			return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidModel, "Token or refresh token is empty");
+
+		try
+		{
+			var userIdFromJwt = ExtractUserIdFromJwt(tokenPair.Token);
+			if (userIdFromJwt == Guid.Empty)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid token");
+
+			var refreshToken = await _refreshTokenRepository.GetRefreshTokenByTokenAsync(tokenPair.RefreshToken);
+			if (refreshToken is null)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid refresh token");
+
+			if (refreshToken.UserId != userIdFromJwt)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid tokens");
+
+			if (refreshToken.IsUsed)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid token");
+
+			if (refreshToken.IsRevoked)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid token");
+
+			var tokens = await _refreshTokenRepository.GetValidRefreshTokensByUserIdAsync(userIdFromJwt);
+			if (tokens.Count() == 0)
+				return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InvalidToken, "Invalid token");
+
+			foreach (var t in tokens)
+				t.IsRevoked = true;
+
+			await _refreshTokenRepository.UpdateRefreshTokensAsync(tokens);
+
+			return true;
+		}
+		catch (Exception ex)
+		{
+			return InfoResult<bool, LogoutErrors>.WithInfo(LogoutErrors.InternalError, ex.Message);
+		}
+	}
+
 	private AuthResponseDto GenerateAuthResponse(User user)
 	{
 		// TODO: Move this to a separate service?
@@ -221,4 +265,5 @@ public class UserService : IUserService
 			return Guid.Empty;
 		}
 	}
+
 }

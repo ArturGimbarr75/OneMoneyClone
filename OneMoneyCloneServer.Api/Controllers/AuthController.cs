@@ -60,9 +60,14 @@ namespace OneMoneyCloneServer.Api.Controllers
 
 		[HttpPost("logout")]
 		[ProducesResponseType(StatusCodes.Status501NotImplemented)]
-		public Task<ActionResult> Logout([FromHeader] string accessToken)
+		public async Task<ActionResult> Logout([FromBody] StringTokenPairDto tokenPair)
 		{
-			return Task.FromResult<ActionResult>(StatusCode(StatusCodes.Status501NotImplemented, "Logout not implemented"));
+			var result = await _userService.LogoutAsync(tokenPair);
+
+			if (result)
+				return Ok();
+
+			return BadRequest(string.Join(", ", result.Info));
 		}
 	}
 }
