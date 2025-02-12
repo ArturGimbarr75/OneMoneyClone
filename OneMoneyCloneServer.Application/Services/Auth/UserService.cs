@@ -116,7 +116,16 @@ public class UserService : IUserService
 			refreshToken.IsUsed = true;
 			await _refreshTokenRepository.UpdateRefreshTokenAsync(refreshToken);
 
-			return GenerateAuthResponse(user);
+			var response = GenerateAuthResponse(user);
+
+			await _refreshTokenRepository.CreateRefreshTokenAsync(new RefreshToken
+			{
+				Token = response.RefreshToken.Token,
+				UserId = user.Id,
+				Expires = response.RefreshToken.Expires
+			});
+
+			return response;
 		}
 		catch (Exception ex)
 		{
@@ -256,7 +265,7 @@ public class UserService : IUserService
 		try
 		{
 			var jwtToken = handler.ReadJwtToken(token);
-			var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
+			var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid"); // TODO: Use constants
 
 			return userIdClaim != null ? Guid.Parse(userIdClaim.Value) : Guid.Empty;
 		}
