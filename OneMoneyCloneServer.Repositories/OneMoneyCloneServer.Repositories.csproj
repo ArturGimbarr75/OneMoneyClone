@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OneMoneyCloneServer.Models\OneMoneyCloneServer.Models.csproj" />
+    <ProjectReference Include="..\OneMoneyCloneServer.Persistence\OneMoneyCloneServer.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
