@@ -45,7 +45,7 @@ internal class RefreshTokenRepository : IRefreshTokenRepository
 	public async Task<IEnumerable<RefreshToken>> GetValidRefreshTokensByUserIdAsync(Guid userId)
 	{
 		DateTime now = DateTime.UtcNow;
-		return await _context.RefreshTokens.Where(rt => rt.UserId == userId && rt.Expires > now).ToListAsync();
+		return await _context.RefreshTokens.Where(rt => rt.UserId == userId && rt.Expires > now && !rt.IsUsed && !rt.IsRevoked).ToListAsync();
 	}
 
 	public async Task<RefreshToken?> UpdateRefreshTokenAsync(RefreshToken refreshToken)
