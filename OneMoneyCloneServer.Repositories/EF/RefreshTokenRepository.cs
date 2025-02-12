@@ -42,16 +42,26 @@ internal class RefreshTokenRepository : IRefreshTokenRepository
 		return _context.RefreshTokens.FirstOrDefaultAsync(rt => rt.Token == token);
 	}
 
+	public async Task<IEnumerable<RefreshToken>> GetValidRefreshTokensByUserIdAsync(Guid userId)
+	{
+		DateTime now = DateTime.UtcNow;
+		return await _context.RefreshTokens.Where(rt => rt.UserId == userId && rt.Expires > now).ToListAsync();
+	}
+
 	public async Task<RefreshToken?> UpdateRefreshTokenAsync(RefreshToken refreshToken)
 	{
 		var entity = _context.RefreshTokens.Update(refreshToken);
-
-		if (entity is null)
-			return null;
 
 		if (await _context.SaveChangesAsync() > 0)
 			return entity.Entity;
 
 		return null;
+	}
+
+	public async Task<IEnumerable<RefreshToken>> UpdateRefreshTokensAsync(IEnumerable<RefreshToken> refreshTokens)
+	{
+		_context.RefreshTokens.UpdateRange(refreshTokens);
+		await _context.SaveChangesAsync();
+		return refreshTokens;
 	}
 }
