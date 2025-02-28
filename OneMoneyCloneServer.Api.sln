@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneServer.DTO", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneClient.Blazor", "OneMoneyCloneClient.Blazor\OneMoneyCloneClient.Blazor.csproj", "{533B3D7A-E2D9-443D-9FB0-971378EB8EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OneMoneyCloneClient.Application", "OneMoneyCloneClient.Application\OneMoneyCloneClient.Application.csproj", "{03125CFC-C9E7-40B1-BD0E-0A5B52382209}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{533B3D7A-E2D9-443D-9FB0-971378EB8EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{533B3D7A-E2D9-443D-9FB0-971378EB8EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{533B3D7A-E2D9-443D-9FB0-971378EB8EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03125CFC-C9E7-40B1-BD0E-0A5B52382209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03125CFC-C9E7-40B1-BD0E-0A5B52382209}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03125CFC-C9E7-40B1-BD0E-0A5B52382209}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03125CFC-C9E7-40B1-BD0E-0A5B52382209}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
