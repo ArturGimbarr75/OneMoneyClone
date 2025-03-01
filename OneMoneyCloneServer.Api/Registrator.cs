@@ -78,4 +78,18 @@ internal static class Registrator
 			});
 		});
 	}
+
+	public static void AddCorsPolicy(this IServiceCollection services)
+	{
+		services.AddCors(options =>
+		{
+			options.AddPolicy("CorsPolicy", policy =>
+			{
+				policy.WithOrigins("https://localhost:7216", "http://localhost:7216")
+					  .AllowAnyHeader()
+					  .AllowAnyMethod()
+					  .AllowCredentials();
+			});
+		});
+	}
 }

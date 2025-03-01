@@ -19,6 +19,7 @@ builder.Services.AddServices();
 builder.Services.AddRepositories();
 builder.Services.AddIdentity();
 builder.Services.AddJwtAuth(builder.Configuration);
+builder.Services.AddCorsPolicy();
 
 var app = builder.Build();
 
@@ -29,6 +30,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseRouting();
 app.UseHttpsRedirection();
+app.UseCors("CorsPolicy");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseHttpLogging();
