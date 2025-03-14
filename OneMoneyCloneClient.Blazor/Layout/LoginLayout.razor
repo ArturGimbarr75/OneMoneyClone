@@ -1,0 +1,47 @@
+﻿@layout EmptyLayout
+
+<div class="container">
+    <div class="row">
+        @if (_isLogin)
+        {
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Login</h1>
+                <EditForm class="justify-content-center" Model="_loginDto" FormName="Login" OnInvalidSubmit="HandleLogin">
+                    <DataAnnotationsValidator />
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <InputText id="email" class="form-control" @bind-Value="_loginDto.Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <InputText id="password" class="form-control" type="password" @bind-Value="_loginDto.Password" />
+                    </div>
+                    <button type="submit" class="btn btn-primary" @onclick="HandleLogin">Login</button>
+                </EditForm>
+                <a href="javascript:void(0)" @onclick="SwitchToRegister">Register</a>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center">Register</h1>
+                <EditForm Model="_loginDto" FormName="Register" OnInvalidSubmit="HandleLogin">
+                    <DataAnnotationsValidator />
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <InputText id="email" class="form-control" @bind-Value="_loginDto.Email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <InputText id="password" class="form-control" type="password" @bind-Value="_loginDto.Password" />
+                    </div><div class="form-group">
+                        <label for="password">Repeat password</label>
+                        <InputText id="password" class="form-control" type="password" @bind-Value="_repeatPassword" />
+                    </div>
+                    <button type="submit" class="btn btn-primary " @onclick="HandleRegister">Login</button>
+                </EditForm>
+            </div>
+            <a href="javascript:void(0)" @onclick="SwitchToLogin">Login</a>
+        }
+    </div>
+</div>

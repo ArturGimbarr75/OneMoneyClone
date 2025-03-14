@@ -217,8 +217,9 @@ public class UserService : IUserService
 	private AuthResponseDto GenerateAuthResponse(User user)
 	{
 		// TODO: Move this to a separate service?
-		// TODO: Use  "Issuer" and "Audience"
 		var tokenHandler = new JwtSecurityTokenHandler();
+		var issuer = _configuration["Jwt:Issuer"];
+		var audience = _configuration["Jwt:Audience"];
 		var key = Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]!);
 		var claims = new[]
 		{
@@ -230,14 +231,13 @@ public class UserService : IUserService
 		var accessTokenExpiration = int.Parse(_configuration["Jwt:AccessTokenExpiration"]!);
 		var refreshTokenExpiration = int.Parse(_configuration["Jwt:RefreshTokenExpiration"]!);
 
-		var tokenDescriptor = new SecurityTokenDescriptor()
-		{
-			Subject = new ClaimsIdentity(claims),
-			Expires = DateTime.UtcNow.AddSeconds(accessTokenExpiration),
-			SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
-		};
-
-		var token = tokenHandler.CreateToken(tokenDescriptor);
+		var token = new JwtSecurityToken(
+			issuer,
+			audience,
+			claims,
+			expires: DateTime.UtcNow.AddSeconds(accessTokenExpiration),
+			signingCredentials: new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
+		);
 		var refreshToken = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
 
 		return new AuthResponseDto
@@ -265,7 +265,7 @@ public class UserService : IUserService
 		try
 		{
 			var jwtToken = handler.ReadJwtToken(token);
-			var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier || c.Type == "nameid"); // TODO: Use constants
+			var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier);
 
 			return userIdClaim != null ? Guid.Parse(userIdClaim.Value) : Guid.Empty;
 		}
@@ -274,5 +274,4 @@ public class UserService : IUserService
 			return Guid.Empty;
 		}
 	}
-
 }
