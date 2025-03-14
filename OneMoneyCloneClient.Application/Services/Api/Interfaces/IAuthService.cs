@@ -6,6 +6,5 @@ public interface IAuthService
 {
 	Task<bool> LoginAsync(LoginDto model);
 	Task<bool> RegisterAsync(RegisterDto model);
-	Task<bool> LogoutAsync();
 	Task<bool> LogoutFromAllDevicesAsync();
 }

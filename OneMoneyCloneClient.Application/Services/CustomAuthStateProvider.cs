@@ -6,7 +6,7 @@ using System.Security.Claims;
 
 namespace OneMoneyCloneClient.Application.Services;
 
-internal class CustomAuthStateProvider : AuthenticationStateProvider, IDisposable
+public class CustomAuthStateProvider : AuthenticationStateProvider, IDisposable
 {
 	private readonly IStorageService _storage;
 	private readonly NavigationManager _navigation;

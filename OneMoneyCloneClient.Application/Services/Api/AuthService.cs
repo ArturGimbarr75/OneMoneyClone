@@ -64,12 +64,6 @@ internal class AuthService : IAuthService
 		return false;
 	}
 
-	public async Task<bool> LogoutAsync()
-	{
-		await _storage.RemoveAllAsync();
-		return true;
-	}
-
 	public async Task<bool> LogoutFromAllDevicesAsync()
 	{
 		var client = _httpClientService.CreateClient();
