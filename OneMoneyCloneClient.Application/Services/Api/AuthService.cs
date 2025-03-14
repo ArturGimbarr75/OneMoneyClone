@@ -73,32 +73,21 @@ internal class AuthService : IAuthService
 	public async Task<bool> LogoutFromAllDevicesAsync()
 	{
 		var client = _httpClientService.CreateClient();
-		var response = await client.PostAsync("api/auth/logout", null);
+		var accessToken = await _storage.GetAccessTokenAsync();
+		var refreshToken = await _storage.GetRefreshTokenAsync();
+		if (refreshToken == null || string.IsNullOrEmpty(accessToken))
+			return false;
+
+		var response = await client.PostAsJsonAsync("api/auth/logout", new StringTokenPairDto
+		{
+			RefreshToken = refreshToken.Token,
+			Token = accessToken
+		});
 
 		if (response.IsSuccessStatusCode)
 		{
 			await _storage.RemoveAllAsync();
-		}
-
-		return response.IsSuccessStatusCode;
-	}
-
-	public async Task<bool> RefreshTokenAsync()
-	{
-		var client = _httpClientService.CreateClient();
-		var response = await client.PostAsync("api/auth/refresh", null);
-
-		if (response != null)
-		{
-			var content = await response.Content.ReadFromJsonAsync<AuthResponseDto>();
-			if (content != null)
-			{
-				await _storage.SetAccessTokenAsync(content.AccessToken);
-				await _storage.SetRefreshTokenAsync(content.RefreshToken);
-				await _storage.SetUserAsync(content.User);
-
-				return response.IsSuccessStatusCode;
-			}
+			return true;
 		}
 
 		return false;
