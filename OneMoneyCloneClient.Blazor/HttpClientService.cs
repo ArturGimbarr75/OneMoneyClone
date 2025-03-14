@@ -5,17 +5,17 @@ namespace OneMoneyCloneClient.Blazor;
 
 internal class HttpClientService : IHttpClientService
 {
-	private readonly IHttpClientFactory _httpClientFactory;
+	private readonly HttpClient _httpClient;
 
-	public HttpClientService(IHttpClientFactory httpClientFactory)
+	public HttpClientService(HttpClient httpClient)
 	{
-		_httpClientFactory = httpClientFactory;
+		_httpClient = httpClient;
 	}
 
 	public HttpClient CreateClient()
 	{
-		var client = _httpClientFactory.CreateClient("ApiClient");
-		client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-		return client;
+		_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+		_httpClient.BaseAddress ??= new Uri("http://localhost:5218"); // TODO: Fix for HttpClient.BaseAddress is null
+		return _httpClient;
 	}
 }

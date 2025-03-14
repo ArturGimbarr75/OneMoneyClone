@@ -1,10 +1,8 @@
-using Microsoft.AspNetCore.Components;
 using OneMoneyCloneClient.Application.Services.Api.Interfaces;
 using OneMoneyCloneServer.DTO.Auth;
 
-namespace OneMoneyCloneClient.Blazor.Pages.Login;
-
-public partial class Login
+namespace OneMoneyCloneClient.Blazor.Layout;
+public partial class LoginLayout
 {
 	private IAuthService _authService { get; set; }
 
@@ -13,10 +11,10 @@ public partial class Login
 	private RegisterDto _registerDto = new();
 	private string _repeatPassword = string.Empty;
 
-	public Login(IAuthService authService)
-	{
-		_authService = authService;
-	}
+	public LoginLayout(IAuthService authService)
+    {
+        _authService = authService;
+    }
 
 	private async Task HandleLogin()
 	{

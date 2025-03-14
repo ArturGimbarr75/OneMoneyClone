@@ -8,14 +8,12 @@ internal static class Registrator
 	public static void Register(this IServiceCollection services)
 	{
 		services.AddScoped<ApiAuthorizationHandler>();
-		services.AddHttpClient("ApiClient", client =>
+		services.AddHttpClient<IHttpClientService, HttpClientService>(client =>
 		{
 			client.BaseAddress = new Uri("http://localhost:5218");
-			client.DefaultRequestHeaders.Accept.Add(
-				new MediaTypeWithQualityHeaderValue("application/json"));
+			client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 		})
-			.AddHttpMessageHandler<ApiAuthorizationHandler>();
-		services.AddScoped(sp => sp.GetRequiredService<IHttpClientFactory>().CreateClient("ApiClient"));
+		.AddHttpMessageHandler<ApiAuthorizationHandler>();
 		services.AddScoped<IHttpClientService, HttpClientService>();
 	}
 }

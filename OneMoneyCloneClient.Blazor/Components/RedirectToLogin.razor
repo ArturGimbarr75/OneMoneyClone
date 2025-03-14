@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@inject NavigationManager Navigation
+@inject AuthenticationStateProvider AuthStateProvider
+
+<AuthorizeView>
+    <Authorized>
+        @ChildContent
+    </Authorized>
+    <NotAuthorized>
+        @code
+        {
+            protected override async Task OnInitializedAsync()
+            {
+                var authState = await AuthStateProvider.GetAuthenticationStateAsync();
+                var user = authState.User;
+
+                if (user.Identity is null || !user.Identity.IsAuthenticated)
+                {
+                    Navigation.NavigateTo("/login", true);
+                }
+            }
+        }
+    </NotAuthorized>
+</AuthorizeView>
+
+@code
+{
+    [Parameter] public RenderFragment ChildContent { get; set; } = default!;
+}
