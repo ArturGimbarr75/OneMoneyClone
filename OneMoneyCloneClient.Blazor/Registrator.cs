@@ -14,6 +14,5 @@ internal static class Registrator
 			client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 		})
 		.AddHttpMessageHandler<ApiAuthorizationHandler>();
-		services.AddScoped<IHttpClientService, HttpClientService>();
 	}
 }

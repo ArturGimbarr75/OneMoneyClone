@@ -15,7 +15,6 @@ internal class HttpClientService : IHttpClientService
 	public HttpClient CreateClient()
 	{
 		_httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-		_httpClient.BaseAddress ??= new Uri("http://localhost:5218"); // TODO: Fix for HttpClient.BaseAddress is null
 		return _httpClient;
 	}
 }

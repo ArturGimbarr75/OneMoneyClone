@@ -24,8 +24,9 @@ public class CustomAuthStateProvider : AuthenticationStateProvider, IDisposable
 	public override async Task<AuthenticationState> GetAuthenticationStateAsync()
 	{
 		var token = await _storage.GetAccessTokenAsync();
+		var refreshToken = await _storage.GetRefreshTokenAsync();
 
-		if (string.IsNullOrEmpty(token) || TokenExpired(token))
+		if ((string.IsNullOrEmpty(token) || TokenExpired(token)) && (refreshToken is null || refreshToken.Expires < DateTime.UtcNow))
 		{
 			var anonymousUser = new ClaimsPrincipal(new ClaimsIdentity());
 			var authState = new AuthenticationState(anonymousUser);
@@ -35,7 +36,7 @@ public class CustomAuthStateProvider : AuthenticationStateProvider, IDisposable
 			return authState;
 		}
 
-		var identity = new ClaimsIdentity(ParseClaimsFromJwt(token), "jwt");
+		var identity = new ClaimsIdentity(ParseClaimsFromJwt(token!), "jwt");
 		var user = new ClaimsPrincipal(identity);
 		var authenticatedState = new AuthenticationState(user);
 
