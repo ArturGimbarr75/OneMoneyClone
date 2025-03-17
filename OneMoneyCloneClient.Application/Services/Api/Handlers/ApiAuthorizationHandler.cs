@@ -51,7 +51,7 @@ public class ApiAuthorizationHandler : DelegatingHandler
 
 	private async Task<string?> RefreshTokenAsync(RefreshTokenDto refreshToken)
 	{
-		var response = await _httpClient.PostAsJsonAsync("api/auth/refresh", refreshToken);
+		var response = await _httpClient.PostAsJsonAsync("api/auth/refresh", refreshToken); // TODO: Check base address
 
 		if (response.IsSuccessStatusCode)
 		{

@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  api:
+    image: one-money-clone-api:latest
+    container_name: one-money-clone-api
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports:
+      - "5000:5000"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=db;Database=${DB_DATABASE};User Id=${DB_USER};Password=${DB_PASS};
+      - ASPNETCORE_URLS=http://+:5000
+    depends_on:
+      - db
+    restart: always
+    networks:
+      - my-network
+
+  blazor:
+    image: one-money-clone-blazor:latest
+    container_name: one-money-clone-blazor
+    build:
+      context: .
+      dockerfile: Dockerfile.blazor
+    ports:
+      - "8081:8081"
+    depends_on:
+      - api
+    restart: always
+    networks:
+      - my-network
+
+  db:
+    image: mariadb:latest
+    container_name: my-db
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD="${DB_PASS}"
+      - MYSQL_DATABASE="${DB_DATABASE}"
+    ports:
+      - "3306:3306"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  mariadb_data:

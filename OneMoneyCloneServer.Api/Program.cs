@@ -13,7 +13,7 @@ builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true
 builder.Services.AddOpenApi();
 builder.Services.AddHttpLogging(o => { });
 
-string connectionString = builder.Configuration.GetConnectionString("DebugConnection")!;
+string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
 builder.Services.AddDatabase(connectionString);
 builder.Services.AddServices();
 builder.Services.AddRepositories();
@@ -23,7 +23,7 @@ builder.Services.AddCorsPolicy();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+//if (app.Environment.IsDevelopment())
 {
 	app.AddSwagger();
 }
