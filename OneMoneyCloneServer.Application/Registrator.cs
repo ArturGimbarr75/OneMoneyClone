@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
+using OneMoneyCloneServer.Application.Services.Account;
 using OneMoneyCloneServer.Application.Services.Auth;
 using OneMoneyCloneServer.Models.Server;
 
@@ -9,6 +10,7 @@ public static class Registrator
 {
 	public static void AddServices(this IServiceCollection services)
 	{
+		services.AddScoped<IAccountService, AccountService>();
 		services.AddScoped<IPasswordHasher<User>, PasswordHasher<User>>();
 		services.AddScoped<IPasswordHashingService, PasswordHashingService>();
 		services.AddScoped<IUserService, UserService>();

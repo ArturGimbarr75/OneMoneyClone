@@ -59,7 +59,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		}
 
 		[HttpPost("logout")]
-		[ProducesResponseType(StatusCodes.Status501NotImplemented)]
+		[ProducesResponseType(StatusCodes.Status200OK)]
+		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public async Task<ActionResult> Logout([FromBody] StringTokenPairDto tokenPair)
 		{
 			var result = await _userService.LogoutAsync(tokenPair);

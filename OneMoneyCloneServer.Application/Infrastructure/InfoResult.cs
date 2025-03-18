@@ -28,4 +28,13 @@ public class InfoResult<T, TError> : Result<T, TError> where TError : struct, En
 			Info = info
 		};
 	}
+
+	public static InfoResult<T, TError> Ok(T val, params IEnumerable<string> info)
+	{
+		return new InfoResult<T, TError>
+		{
+			Value = val,
+			Info = info
+		};
+	}
 }

@@ -15,10 +15,20 @@ namespace OneMoneyCloneServer.Api.Controllers
             _logger = logger;
         }
 
-		[HttpGet]
+		[HttpGet("get")]
 		public string Get()
 		{
 			return "Hello, World!";
+		}
+
+		[HttpGet("test-auth")]
+		public IActionResult TestAuth()
+		{
+			return Ok(new
+			{
+				Name = User.Identity?.Name,
+				Claims = User.Claims.Select(c => new { c.Type, c.Value }).ToList()
+			});
 		}
 	}
 }
