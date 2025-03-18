@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using OneMoneyCloneServer.Application.Helpers;
 using OneMoneyCloneServer.Application.Infrastructure;
 using OneMoneyCloneServer.Application.Services.Auth.Errors;
 using OneMoneyCloneServer.DTO.Auth;
@@ -63,12 +64,7 @@ public class UserService : IUserService
 				return LoginErrors.InvalidCredentials;
 
 			var authResponse = GenerateAuthResponse(user);
-			RefreshToken rt = new()
-			{
-				Token = authResponse.RefreshToken.Token,
-				UserId = user.Id,
-				Expires = authResponse.RefreshToken.Expires
-			};
+			RefreshToken rt = authResponse.MapToModel();
 			var savedRt = await _refreshTokenRepository.CreateRefreshTokenAsync(rt);
 
 			if (savedRt is null)
@@ -148,24 +144,13 @@ public class UserService : IUserService
 		if (!await _currencyRepository.IsCurrencyExists(model.MainCurrencyId))
 			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InvalidCurrency, "Currency not found");
 
-		var user = new User
-		{
-			Email = model.Email,
-			UserName = model.Email,
-			MainCurrencyId = model.MainCurrencyId
-		};
+		var user = model.MapToModel();
 
 		var creationResult = await _userManager.CreateAsync(user, model.Password);
 		if (!creationResult.Succeeded)
 			return InfoResult<UserDto, RegisterErrors>.WithInfo(RegisterErrors.InternalError, string.Join(", ", creationResult.Errors.Select(e => e.Description)));
 
-		var userDto = new UserDto
-		{
-			Id = user.Id,
-			Email = user.Email!,
-			MainCurrencyId = user.MainCurrencyId,
-			CreatedAt = user.CreatedAt
-		};
+		var userDto = user.MapToDto();
 
 		return userDto;
 	}
