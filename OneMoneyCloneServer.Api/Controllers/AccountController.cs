@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using OneMoneyCloneServer.Application.Services.Account;
 using OneMoneyCloneServer.DTO.Account;
+using System.Security.Claims;
 
 namespace OneMoneyCloneServer.Api.Controllers
 {
@@ -25,7 +26,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		public async Task<ActionResult<AccountDto>> CreateAccount([FromBody] CreateAccountDto account)
 		{
-			var result = await _accountService.CreateAccountAsync(account, Guid.Parse(User.Identity!.Name!));
+			Guid userId = Guid.Parse(User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value);
+			var result = await _accountService.CreateAccountAsync(account, userId);
 			if (result)
 				return Ok(result.Value);
 			
@@ -38,7 +40,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		public async Task<ActionResult<AccountDto>> UpdateAccount([FromBody] AccountDto account)
 		{
-			var result = await _accountService.UpdateAccountAsync(account, Guid.Parse(User.Identity!.Name!));
+			Guid userId = Guid.Parse(User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value);
+			var result = await _accountService.UpdateAccountAsync(account, userId);
 			if (result)
 				return Ok(result.Value);
 
@@ -51,7 +54,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		public async Task<ActionResult<AccountDto>> DeleteAccount(Guid id)
 		{
-			var result = await _accountService.DeleteAccountAsync(id, Guid.Parse(User.Identity!.Name!));
+			Guid userId = Guid.Parse(User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value);
+			var result = await _accountService.DeleteAccountAsync(id, userId);
 			if (result)
 				return Ok(result.Value);
 			
@@ -64,7 +68,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		public async Task<ActionResult<AccountDto>> GetAccountById(Guid id)
 		{
-			var result = await _accountService.GetAccountByIdAsync(id, Guid.Parse(User.Identity!.Name!));
+			Guid userId = Guid.Parse(User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value);
+			var result = await _accountService.GetAccountByIdAsync(id, userId);
 			if (result)
 				return Ok(result.Value);
 
@@ -77,7 +82,8 @@ namespace OneMoneyCloneServer.Api.Controllers
 		[ProducesResponseType(StatusCodes.Status401Unauthorized)]
 		public async Task<ActionResult<IEnumerable<AccountDto>>> GetAccountsByUserId()
 		{
-			var result = await _accountService.GetAccountsByUserIdAsync(Guid.Parse(User.Identity!.Name!));
+			Guid userId = Guid.Parse(User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value);
+			var result = await _accountService.GetAccountsByUserIdAsync(userId);
 			if (result)
 				return Ok(result.Value);
 
